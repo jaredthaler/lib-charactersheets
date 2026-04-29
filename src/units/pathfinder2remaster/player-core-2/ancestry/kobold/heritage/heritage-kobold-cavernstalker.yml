@@ -29,7 +29,7 @@ inc:
                   - p: "_{Climb rock walls at half your speed on successful Athletics, or full speed on a critical success.}"
                   - p: "_{Upgraded success on Acrobatics checks to Squeeze.}"
                     icon: save-crit-succeed
-             - selectable: "##:quick-climber"
+              - selectable: "##:quick-climber"
                 contents:
                   - h6: "_{Quick Climber}"
                   - p: "_{Climb at full speed on a success.}"
