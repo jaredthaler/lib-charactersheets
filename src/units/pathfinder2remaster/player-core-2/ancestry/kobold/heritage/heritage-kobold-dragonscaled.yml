@@ -30,3 +30,10 @@ inc:
             content: "_{from ancestry.}"
           - value-block: "_{+1}"
             content: "_{to save vs. dragon breath, sleep, and paralysis.}"
+
+  # add a heritage savign throw reaction with a numeric bonus
+  - at: '@saving-throws'
+    add:
+      - value-block: "_{+1}"
+        content: "_{to save vs. dragon breath, sleep, and paralysis.}"
+
