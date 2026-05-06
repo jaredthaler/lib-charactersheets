@@ -4,7 +4,7 @@
 
 unit: heritage/kobold/remaster/venomtail
 in: heritage/apg/kobold
-group: "_{Player Core}"
+group: "_{Player Core 2}"
 name: "_{Venomtail Kobold}"
 # enabled: false
 
