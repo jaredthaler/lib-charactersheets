@@ -20,21 +20,23 @@ inc:
         title: "_{Elementalheart Kobold}"
         contents:
           # simple description
-          - field: apg/kobold/dragonscaled/resistance-type
+          - field: kobold/elementalheart/resistance-type
             label: "_{Energy type}"
             width: stretch
           - paste: leveled-damage-resist
             params:
-              id: kobobl/elementalheart/energy-resistance
+              id: kobold/elementalheart/energy-resistance
+              type: ""
 
   # add a damage resist
   - at: '@health'
     add:
-      - field: apg/kobold/dragonscaled/resistance-type
+      - field: kobold/elementalheart/resistance-type-health
         label: "_{Energy type}"
         width: stretch
       - paste: leveled-damage-resist-health
         params:
-          id: <unique id>
+          id: kobold/elementalheart/energy-resistance-health
+          type: ""
 
 
