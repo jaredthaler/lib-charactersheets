@@ -34,6 +34,7 @@ inc:
       - row:
         contents:
         - field: kobold/elementalheart/resistance-type-health
+          title: "_{Elementalheart Kobold}"
           label: "_{Energy type}"
           width: stretch
         - paste: leveled-damage-resist-health
