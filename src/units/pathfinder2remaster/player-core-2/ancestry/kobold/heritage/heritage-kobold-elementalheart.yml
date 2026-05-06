@@ -31,12 +31,13 @@ inc:
   # add a damage resist
   - at: '@health'
     add:
-      - field: kobold/elementalheart/resistance-type-health
-        label: "_{Energy type}"
-        width: stretch
-      - paste: leveled-damage-resist-health
-        params:
-          id: kobold/elementalheart/energy-resistance-health
-          type: ""
+      - row:
+        - field: kobold/elementalheart/resistance-type-health
+          label: "_{Energy type}"
+          width: stretch
+        - paste: leveled-damage-resist-health
+          params:
+            id: kobold/elementalheart/energy-resistance-health
+            type: ""
 
 
