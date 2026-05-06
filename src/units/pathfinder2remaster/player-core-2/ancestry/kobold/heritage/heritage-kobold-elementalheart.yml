@@ -1,0 +1,40 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: heritage/kobold/remaster/cavernstalker
+in: heritage/apg/kobold
+group: "_{Player Core}"
+name: "_{Cavernstalker Kobold}"
+# enabled: false
+
+inc:
+  # set the heritage name
+  - set: heritage
+    value: "_{Cavernstalker Kobold}"
+
+  # create the heritage text block
+  - at: '@heritage'
+    replace:
+      - article:
+        title: "_{Cavernstalker Kobold}"
+        contents:
+          # simple description
+          - field: apg/kobold/dragonscaled/resistance-type
+            label: "_{Energy type}"
+            width: stretch
+          - paste: leveled-damage-resist
+            params:
+              id: kobobl/elementalheart/energy-resistance
+
+  # add a damage resist
+  - field: apg/kobold/dragonscaled/resistance-type
+    label: "_{Energy type}"
+    width: stretch
+  - at: '@health'
+    add:
+      - paste: leveled-damage-resist-health
+        params:
+          id: <unique id>
+
+
