@@ -32,8 +32,9 @@ inc:
   - at: '@health'
     add:
       - row:
-        title: "_{Elementalheart Kobold}"
         contents:
+        - p:
+          title: "_{Elementalheart Kobold}"
         - field: kobold/elementalheart/resistance-type-health
           label: "_{Energy type}"
           width: stretch
