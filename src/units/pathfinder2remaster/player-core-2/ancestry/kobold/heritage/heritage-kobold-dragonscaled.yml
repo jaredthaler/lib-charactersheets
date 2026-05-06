@@ -4,7 +4,7 @@
 
 unit: heritage/kobold/remaster/dragonscaled
 in: heritage/apg/kobold
-group: "_{Player Core}"
+group: "_{Player Core 2}"
 name: "_{Dragonscaled Kobold}"
 # enabled: false
 
