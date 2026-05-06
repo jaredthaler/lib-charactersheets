@@ -4,7 +4,7 @@
 
 unit: heritage/kobold/remaster/cavernstalker
 in: heritage/apg/kobold
-group: "_{Player Core}"
+group: "_{Player Core 2}"
 name: "_{Cavernstalker Kobold}"
 # enabled: false
 
