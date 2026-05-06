@@ -28,11 +28,11 @@ inc:
               id: kobobl/elementalheart/energy-resistance
 
   # add a damage resist
-  - field: apg/kobold/dragonscaled/resistance-type
-    label: "_{Energy type}"
-    width: stretch
   - at: '@health'
     add:
+      - field: apg/kobold/dragonscaled/resistance-type
+        label: "_{Energy type}"
+        width: stretch
       - paste: leveled-damage-resist-health
         params:
           id: <unique id>
