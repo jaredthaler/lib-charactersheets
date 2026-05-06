@@ -24,7 +24,7 @@ inc:
             contents:
               - p:
                 title: "_{Tail Toxin}"
-                content: "_{Once a day, apply venom to a weapon. If its next attack hits, deal persistent poison equal the your level.}"
+                content: "_{Once a day, apply venom to a weapon. If its next attack hits, deal persistent poison equal to your level.}"
 
   - at: '@actions'
     add:
@@ -32,4 +32,4 @@ inc:
         contents:
           - p:
             title: "_{Tail Toxin}"
-            content: "_{Once a day, apply venom to a weapon. If its next attack hits, deal persistent poison equal the your level.}"
+            content: "_{Once a day, apply venom to a weapon. If its next attack hits, deal persistent poison equal to your level.}"
