@@ -5,18 +5,25 @@
 unit: heritage/lizardfolk/remaster/cliffscale
 in: heritage/lost-omens/character-guide/lizardfolk
 group: "_{Player Core 2}"
-name: "_{<heritage> <ancestry>}"
+name: "_{Cliffscale Lizardfolk}"
 enabled: false
+
+require:
+  - unit: feat/combat-climber
 
 inc:
   # set the heritage name
   - set: heritage
-    value: "_{<heritage> <ancestry>}"
+    value: "_{Cliffscale Lizardfolk}"
 
   # create the heritage text block
   - at: '@heritage'
     replace:
       - article:
-        title: "_{<heritage> <ancestry>}"
+        title: "_{Cliffscale Lizardfolk}"
         contents:
           # simple description
+          - p: "_{As long as you aren't wearing footwear, can climb without a free hand.}"
+          - p: "_{Upgraded success on Athletics checks to Climb.}"
+            icon: save-crit-succeed
+          - paste: feat/combat-climber
