@@ -13,12 +13,12 @@ require:
 
 form:
   - select: heritage/apg/lizardfolk
-    name: "_{Catfolk Heritage}"
+    name: "_{Lizardfolk Heritage}"
     max: 1
   
 inc:
   - set: ancestry
-    value: "_{lizardfolk}"
+    value: "_{Lizardfolk}"
   - set: hp-ancestry
     value: 8
 # stat boosts
@@ -36,10 +36,10 @@ inc:
   - at: '@ancestry'
     replace:
       - article: ancestry
-        title: "_{lizardfolk}"
+        title: "_{Lizardfolk}"
         contents:
           - flags:
-              - "_{lizardfolk}"
+              - "_{Lizardfolk}"
               - "_{Humanoid}"
           - field: ancestry-speed
             frame: right
