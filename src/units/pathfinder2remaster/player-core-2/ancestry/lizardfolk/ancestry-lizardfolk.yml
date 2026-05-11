@@ -51,12 +51,11 @@ inc:
               name: "_{Claws}"
               damage: "_{1d4}"
               type: "_{Slashing}"
-            contents:
-              - flags:
-                  - "_{Brawling}"
-                  - "_{Agile}"
-                  - "_{Finesse}"
-                  - "_{Unarmed}"
+          - flags:
+              - "_{Brawling}"
+              - "_{Agile}"
+              - "_{Finesse}"
+              - "_{Unarmed}"
           - hr:
             light: true
           - paste: feat/breath-control
