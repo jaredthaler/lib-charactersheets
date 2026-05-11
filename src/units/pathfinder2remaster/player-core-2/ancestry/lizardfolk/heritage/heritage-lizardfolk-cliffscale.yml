@@ -6,7 +6,7 @@ unit: heritage/lizardfolk/remaster/cliffscale
 in: heritage/lost-omens/character-guide/lizardfolk
 group: "_{Player Core 2}"
 name: "_{Cliffscale Lizardfolk}"
-enabled: false
+# enabled: false
 
 require:
   - unit: feat/combat-climber
