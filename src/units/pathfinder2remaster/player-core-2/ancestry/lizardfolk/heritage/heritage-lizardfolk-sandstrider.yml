@@ -29,10 +29,10 @@ inc:
           #  temperature adjustment
           - paste: temperature-tolerance
             params: 
-              temp: "_{<temp>}"
+              temp: "_{heat}"
 
           - p: "_{Can go 10 times as long as normal before you are affectwed by starvation or thirst.}"
-          - p: "_{Cold effects are one step more extreme.}"
+          - p: "_{Treat environmental cold as one step more extreme.}"
 
 
   # add a damage resist
