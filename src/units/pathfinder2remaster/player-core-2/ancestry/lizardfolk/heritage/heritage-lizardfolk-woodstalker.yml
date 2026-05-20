@@ -22,7 +22,9 @@ inc:
           # simple description
           - p: "_{Can always Take Cover when in forest or jungle.}"
           - paste: feat/terrain-stalker
+            params: 
+              id: "feat/terrain-stalker-woodstalker"
 
-  - at: '@feat/terrain-stalker:terrain'
+  - at: '@feat/terrain-stalker-woodstalker:terrain'
     replace:
       - h6: "_{Underbrush}"
