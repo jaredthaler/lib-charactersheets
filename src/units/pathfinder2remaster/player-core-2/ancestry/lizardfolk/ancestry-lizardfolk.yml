@@ -80,5 +80,9 @@ inc:
                   - "_{Finesse}"
                   - "_{Unarmed}"
 
+  - at: '@ethnicity'
+    replace:
+      - nothing:
+
 
             
