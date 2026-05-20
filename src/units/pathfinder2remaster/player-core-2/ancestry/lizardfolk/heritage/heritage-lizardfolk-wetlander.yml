@@ -2,22 +2,22 @@
 # This file is licensed under the ORC License.
 # See the ORC Notice within this repository.
 
-unit: heritage/lizardfolk/remaster/unseen
+unit: heritage/lizardfolk/remaster/wetlander
 in: heritage/lost-omens/character-guide/lizardfolk
 group: "_{Player Core 2}"
-name: "_{Unseen Lizardfolk}"
+name: "_{Wetlander Lizardfolk}"
 # enabled: false
 
 inc:
   # set the heritage name
   - set: heritage
-    value: "_{Unseen Lizardfolk}"
+    value: "_{Wetlander Lizardfolk}"
 
   # create the heritage text block
   - at: '@heritage'
     replace:
       - article:
-        title: "_{Unseen Lizardfolk}"
+        title: "_{Wetlander Lizardfolk}"
         contents:
           # simple description
           # add a speed
