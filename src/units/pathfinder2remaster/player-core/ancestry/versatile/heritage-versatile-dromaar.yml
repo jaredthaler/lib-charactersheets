@@ -20,7 +20,7 @@ inc:
   - at: '@heritage'
     replace:
       - article:
-        title: "_{Half-Orc}"
+        title: "_{Dromaar}"
         contents:
           - flags: 
             - "_{Orc}"
