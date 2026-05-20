@@ -1,0 +1,26 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: heritage/lizardfolk/remaster/unseen
+in: heritage/lost-omens/character-guide/lizardfolk
+group: "_{Player Core 2}"
+name: "_{Unseen Lizardfolk}"
+# enabled: false
+
+inc:
+  # set the heritage name
+  - set: heritage
+    value: "_{Unseen Lizardfolk}"
+
+  # create the heritage text block
+  - at: '@heritage'
+    replace:
+      - article:
+        title: "_{Unseen Lizardfolk}"
+        contents:
+          # simple description
+          # add a speed
+          - value-block: "_{15 ft}"
+            width: medium
+            content: "_{Swim speed}"
