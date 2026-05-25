@@ -1,0 +1,16 @@
+# Copyright 2026 Marcus Downing
+# This file is compliant with the Open Game License (OGL).
+# See the text of the OGL within this repository.
+
+unit: feat/combat-climber
+name: "_{Combat Climber}"
+group: "_{Player Core}"
+
+inc:
+  - copy: feat/combat-climber
+    contents:
+      - article: feat/combat-climber
+        title: "_{Combat Climber}"
+        cat: "_{Feat}"
+        contents:
+          - p: "_{Not offguard while Climbing and can Climb with a hand occupied.}"
