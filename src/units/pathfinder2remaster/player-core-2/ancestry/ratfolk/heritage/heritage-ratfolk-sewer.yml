@@ -2,16 +2,16 @@
 # This file is licensed under the ORC License.
 # See the ORC Notice within this repository.
 
-unit: heritage/ratfolk/remaster/deep
+unit: heritage/ratfolk/remaster/sewer
 in: heritage/apg/ratfolk
 group: "_{Player Core 2}"
-name: "_{Deep Ratfolk}"
+name: "_{Sewer Ratfolk}"
 # enabled: false
 
 inc:
   # set the heritage name
   - set: heritage
-    value: "_{Deep Ratfolk}"
+    value: "_{Sewer Ratfolk}"
   - set: perception-darkvision
     value: true
 
@@ -19,7 +19,7 @@ inc:
   - at: '@heritage'
     replace:
       - article:
-        title: "_{Deep Ratfolk}"
+        title: "_{Sewer Ratfolk}"
         contents:
           # simple description
           - p: "_{Immune to putrid plague.}"
