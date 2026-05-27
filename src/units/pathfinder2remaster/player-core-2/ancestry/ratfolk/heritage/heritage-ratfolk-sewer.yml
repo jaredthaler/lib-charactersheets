@@ -24,6 +24,7 @@ inc:
           # simple description
           - p: "_{Immune to putrid plague.}"
           - value-block: "+1"
+            width: medium
             content: "_{and upgraded success on saves against diseases and poisons}"
             icon: save-crit-succeed
           - p: "_{Reduce failure on disease and poison if another ablity would upgrade success}"
@@ -32,6 +33,6 @@ inc:
   - at: '@saving-throws'
     add:
       - p:
-        title: "_{Irongut Goblin}"
+        title: "_{Sewer Ratfolk}"
       - value-block: "+1"
         content: "_{and upgraded success on saves against diseases and poisons}"
