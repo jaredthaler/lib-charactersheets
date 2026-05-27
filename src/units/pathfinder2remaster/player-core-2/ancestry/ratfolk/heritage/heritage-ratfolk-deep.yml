@@ -11,13 +11,13 @@ name: "_{Deep Ratfolk}"
 inc:
   # set the heritage name
   - set: heritage
-    value: "_{Cliffscale Lizardfolk}"
+    value: "_{Deep Ratfolk}"
 
   # create the heritage text block
   - at: '@heritage'
     replace:
       - article:
-        title: "_{Cliffscale Lizardfolk}"
+        title: "_{Deep Ratfolk}"
         contents:
           # simple description
           - paste: darkvision
