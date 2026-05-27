@@ -12,6 +12,8 @@ inc:
   # set the heritage name
   - set: heritage
     value: "_{Deep Ratfolk}"
+  - set: perception-darkvision
+    value: true
 
   # create the heritage text block
   - at: '@heritage'
