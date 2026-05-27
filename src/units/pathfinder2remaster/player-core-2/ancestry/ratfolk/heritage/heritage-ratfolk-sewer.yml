@@ -24,7 +24,7 @@ inc:
           # simple description
           - p: "_{Immune to putrid plague.}"
           - value-block: "+1"
-            width: large
+            width: small
             content: "_{and upgraded success on saves against diseases and poisons}"
             icon: save-crit-succeed
           - p: "_{Reduce failure on disease and poison if another ablity would upgrade success}"
