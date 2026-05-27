@@ -31,7 +31,7 @@ inc:
 
   - at: '@saving-throws'
     add:
-        - p:
-          title: "_{Irongut Goblin}"
-       - value-block: "+1"
-         content: "_{and upgraded success on saves against diseases and poisons}"
+      - p:
+        title: "_{Irongut Goblin}"
+      - value-block: "+1"
+        content: "_{and upgraded success on saves against diseases and poisons}"
