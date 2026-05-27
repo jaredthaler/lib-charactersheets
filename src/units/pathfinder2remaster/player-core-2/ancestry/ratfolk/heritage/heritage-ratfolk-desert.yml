@@ -20,7 +20,7 @@ inc:
         title: "_{Desert Ratfolk}"
         contents:
           # simple description
-          - value-block: "_{30ft}"
+          - value-block: "_{30 ft}"
             width: "medium"
             content: "_{Speed when both hands are free}"          
           #  temperature adjustment
