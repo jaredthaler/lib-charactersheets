@@ -20,7 +20,7 @@ inc:
         title: "_{Jinxed Tengu}"
         contents:
           # simple description
-          - p: "_{Upgraded success when you succeed a save against a curse or misfortune.}"
+          - p: "_{Upgraded success when you succeed at a save against a curse or misfortune.}"
             icon: save-crit-succeed
           - value-block: "_{DC 17}"
             width: medium
@@ -29,7 +29,7 @@ inc:
     # add a heritage savign throw upgraded success
   - at: "@saving-throws"
     add:
-      - p: "_{Upgraded success when you succeed a save against a curse or misfortune.}"
+      - p: "_{Upgraded success when you succeed at a save against a curse or misfortune.}"
         title: "_{Jinxed Tengu}"
         icon: save-crit-succeed
 
