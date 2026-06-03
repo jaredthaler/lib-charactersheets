@@ -28,7 +28,7 @@ inc:
                   width: large
                   suffix: "_{d6}"
                   icon: d6
-                  eq: "ceil(%{level}/2)+1"
+                  eq: "ceil(%{level}/2)"
                 inputs:
                   - ruby-round-up:
                     contents:
