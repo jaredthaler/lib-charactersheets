@@ -32,6 +32,7 @@ inc:
                 inputs:
                   - ruby-round-up:
                     contents:
+                      - span: "1 +"
                       - field:
                         ref: level
                         label: "_{Level}"
