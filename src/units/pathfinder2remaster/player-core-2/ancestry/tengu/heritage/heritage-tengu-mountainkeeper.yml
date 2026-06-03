@@ -10,6 +10,8 @@ name: "_{Mountainkeeper Tengu}"
 
 require:
   - unit: cantrip/vitality-lash
+  - unit: cantrip/produce-flame
+
 
 inc:
   # set the heritage name
@@ -23,7 +25,7 @@ inc:
         title: "_{Mountainkeeper Tengu}"
         contents:
           # simple description
-          - paste: cantrip/vitality-lash
+          - paste: cantrip/produce-flame
           - paste: spell-attack
             ability: "Charisma"
           - hr:
