@@ -2,7 +2,7 @@
 # This file is licensed under the ORC License.
 # See the ORC Notice within this repository.
 
-unit: heritage/ratfolk/remaster/dogtooth
+unit: heritage/tengu/remaster/dogtooth
 in: heritage/apg/tengu
 group: "_{Player Core 2}"
 name: "_{Dogtooth Tengu}"
