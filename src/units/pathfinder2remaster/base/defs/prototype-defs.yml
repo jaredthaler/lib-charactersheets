@@ -62,7 +62,7 @@ inc:
 
       # Spells
       - set: spell-attack-proficiency
-        value: "#{divine}"
+        value: "#{spells}"
       - set: spell-dc-proficiency
         value: "#{spells}"
 
