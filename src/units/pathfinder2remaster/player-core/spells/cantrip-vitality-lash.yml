@@ -19,7 +19,6 @@ inc:
 
           - action: 2
             contents:
-              - "_{Make a melee spell attack.}"
 
               - calc:
                 output:
