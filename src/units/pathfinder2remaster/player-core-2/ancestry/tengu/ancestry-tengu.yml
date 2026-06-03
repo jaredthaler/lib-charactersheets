@@ -64,15 +64,17 @@ inc:
       - action: 1
         contents:
           - article:
+            id: test-id-tengu-beak
             title: "_{Beak attack}"
             contents:
               - paste: natural-weapon-action
                 params:
-                  id: ancestry-ratfolk-jaws-action
+                  id: ancestry-tengu-beak-action
                   name: "_{Beak}"
                   damage: "_{1d4}"
                   type: "_{P}"
               - flags:
+                id: ancestry-tengu-beak-flags
                   - "_{Brawling}"
                   - "_{Finesse}"
                   - "_{Unarmed}"
