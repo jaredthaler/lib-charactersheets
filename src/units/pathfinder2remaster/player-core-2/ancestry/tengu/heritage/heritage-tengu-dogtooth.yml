@@ -28,11 +28,10 @@ inc:
 
   - at: @ancestry-action-tengu-beak-traits
     replace: 
-      contents:
-        - flags:
-            - "_{Brawling}"
-            - "_{Deadly} _{d8}"
-            - "_{Finesse}"
-            - "_{Unarmed}"
+      - flags:
+          - "_{Brawling}"
+          - "_{Deadly} _{d8}"
+          - "_{Finesse}"
+          - "_{Unarmed}"
 
           
