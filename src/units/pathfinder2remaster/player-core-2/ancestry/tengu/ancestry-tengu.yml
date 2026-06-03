@@ -72,7 +72,7 @@ inc:
                   name: "_{Beak}"
                   damage: "_{1d4}"
                   type: "_{P}"
-              - zone: "@tengu-beak-traits"
+              - zone: "@ancestry-action-tengu-beak-traits"
                 contents:
                   - flags:
                       - "_{Brawling}"
