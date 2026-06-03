@@ -10,7 +10,7 @@ name: "_{Mountainkeeper Tengu}"
 
 require:
   - unit: cantrip/vitality-lash
-  - unit: cantrip/produce-flame
+  - unit: cantrip/ray-of-frost
 
 
 inc:
@@ -25,7 +25,7 @@ inc:
         title: "_{Mountainkeeper Tengu}"
         contents:
           # simple description
-          - paste: cantrip/produce-flame
+          - paste: cantrip/ray-of-frost
           - paste: spell-attack
             ability: "Charisma"
           - hr:
