@@ -16,5 +16,16 @@ inc:
       - article:
         title: "_{Jinxed Tengu}"
         contents:
-          - p: "_{On gaining the doomed condition, attempt a DC17 flat check to reduce it by 1.}"
-          - paste: darkvision
+          # simple description
+          - p: "_{Upgraded success at saves vs a curse or misfortune.}"
+            icon: save-crit-succeed
+          - value-block: "_{DC 17}"
+            width: medium
+            content: "_{flat check to reduce doomed condition you would gain by 1}"
+
+    # add a heritage savign throw upgraded success
+  - at: "@saving-throws"
+    add:
+      - p: "_{Upgraded success at saves vs a curse or misfortune.}"
+        title: "_{Jinxed Tengu}"
+        icon: save-crit-succeed
