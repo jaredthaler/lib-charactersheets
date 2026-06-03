@@ -26,7 +26,7 @@ inc:
               - flags:
                   - "_{Deadly} _{d8}"
 
-  - at: @ancestry-action-tengu-beak-traits
+  - at: '@ancestry-action-tengu-beak-traits'
     replace: 
       - flags:
           - "_{Brawling}"
