@@ -3272,7 +3272,7 @@
                       "hr": true,
                       "contents": [
                         {
-                          "type": "g",
+                          "type": "box",
                           "contents": [
                             {
                               "type": "row",
@@ -3310,6 +3310,9 @@
                                   "type": "row",
                                   "contents": [
                                     {
+                                      "type": "spacer"
+                                    },
+                                    {
                                       "type": "field",
                                       "id": "gender",
                                       "label": "_{Gender}",
@@ -3342,6 +3345,9 @@
                                         "_{Large}",
                                         "_{Huge}"
                                       ]
+                                    },
+                                    {
+                                      "type": "spacer"
                                     }
                                   ]
                                 },
@@ -6427,7 +6433,7 @@
                       "id": "perception-notes",
                       "frame": "none",
                       "control": "p",
-                      "lines": 2,
+                      "lines": 1,
                       "with-title": false,
                       "optional": true
                     }
@@ -7969,13 +7975,6 @@
                       "id": "hp-more-1",
                       "frame": "none",
                       "align": "left",
-                      "width": "stretch"
-                    },
-                    {
-                      "type": "field",
-                      "id": "hp-more-2",
-                      "frame": "none",
-                      "align": "left",
                       "width": "stretch",
                       "merge-bottom": true
                     },
@@ -8799,20 +8798,6 @@
                     {
                       "type": "field",
                       "id": "saving-throws-conditional-2",
-                      "frame": "none",
-                      "align": "left",
-                      "width": "stretch"
-                    },
-                    {
-                      "type": "field",
-                      "id": "saving-throws-conditional-3",
-                      "frame": "none",
-                      "align": "left",
-                      "width": "stretch"
-                    },
-                    {
-                      "type": "field",
-                      "id": "saving-throws-conditional-4",
                       "frame": "none",
                       "align": "left",
                       "width": "stretch",
