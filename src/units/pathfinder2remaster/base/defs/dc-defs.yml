@@ -91,6 +91,41 @@ inc:
                 misc: true
                 optional: true
 
+  - copy: inate-spell-attack
+    params:
+      id: inate-spell-attack
+      legend: "_{Spell\nAttack}"
+      ability: ""
+      misc: true
+    contents:
+      - calc:
+        output:
+          field: "#{id}"
+          legend: "#{legend}"
+          width: large
+          overprint: true
+          icon: bonus
+          format: modifier
+          eq: '%{#{id}-ability}+%{#{id}-proficiency-bonus}+%{#{id}-misc}'
+        inputs:
+          - field: "#{id}-ability"
+            label: "_{#{ability}}"
+            underlay: "_{#{ability}}"
+            ref: "#{ability}"
+            misc: true
+          - span: "+"
+          - field: "#{id}-proficiency"
+            label: "_{Proficiency}"
+            control: proficiency
+          - if: "#{misc}"
+            then:
+              - span: "+"
+                optional: true
+              - field: "#{id}-misc"
+                label: "_{Misc}"
+                misc: true
+                optional: true
+
   - copy: spell-dc
     params:
       id: spell-dc
