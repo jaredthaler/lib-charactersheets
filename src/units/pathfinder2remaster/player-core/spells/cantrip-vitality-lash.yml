@@ -29,10 +29,10 @@ inc:
                   icon: d6
                   eq: "1+%{focus-rank}"
                 inputs:
-                  - span: "1 +"
+                  - span: "2 +"
                   - field:
                     ref: "%{focus-rank}-1"
-                    label: "_{Rank}"
+                    label: "_{Heighten}"
               - flags:
                 - "_{Vitality}"
   
