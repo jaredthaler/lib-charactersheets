@@ -33,11 +33,10 @@ inc:
                     contents:
                       - span: "1 +"
                       - field:
-                        ref: level
-                        label: "_{Level}"
-                      - span: "&divide; 2"
+                        ref: focus-rank
+                        label: "_{Rank}"
               - flags:
                 - "_{Vitality}"
   
           - p: "_{On a critical fail, target is enfeebled 1 until the start of your turn.}"
-            icon: critical-fail
+            icon: crit-fail
