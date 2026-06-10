@@ -27,14 +27,12 @@ inc:
                   width: large
                   suffix: "_{d6}"
                   icon: d6
-                  eq: "1+ceil(%{level}/2)"
+                  eq: "1+%{focus-rank}"
                 inputs:
-                  - ruby-round-up:
-                    contents:
-                      - span: "1 +"
-                      - field:
-                        ref: focus-rank
-                        label: "_{Rank}"
+                  - span: "1 +"
+                  - field:
+                    ref: focus-rank
+                    label: "_{Rank}"
               - flags:
                 - "_{Vitality}"
   
