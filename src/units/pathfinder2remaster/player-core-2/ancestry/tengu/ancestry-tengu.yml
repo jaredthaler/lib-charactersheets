@@ -58,6 +58,10 @@ inc:
               - "_{Finesse}"
               - "_{Unarmed}"
 
+  - at: '@ethnicity'
+    replace:
+      - nothing:
+
   # add a natural weapon
   - at: '@actions'
     add:
