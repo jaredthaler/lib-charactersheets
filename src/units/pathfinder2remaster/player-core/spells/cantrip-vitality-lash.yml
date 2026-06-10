@@ -35,6 +35,8 @@ inc:
                     label: "_{Heightened +1}"
               - flags:
                 - "_{Vitality}"
-  
+          - paste: basic-save
+            params:
+              save: "_{FORT}"  
           - p: "_{On a critical fail, target is enfeebled 1 until the start of your turn.}"
             icon: save-crit-fail
