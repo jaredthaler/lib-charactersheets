@@ -37,4 +37,4 @@ inc:
                 - "_{Vitality}"
   
           - p: "_{On a critical fail, target is enfeebled 1 until the start of your turn.}"
-            icon: crit-fail
+            icon: save-crit-fail
