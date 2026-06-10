@@ -30,7 +30,7 @@ inc:
                   eq: "1+%{focus-rank}"
                 inputs:
                   - span: "2 +"
-                  - field: "##:heighten
+                  - field: "##:heighten"
                     eq: "%{focus-rank}-1"
                     label: "_{Heightened +1}"
               - flags:
