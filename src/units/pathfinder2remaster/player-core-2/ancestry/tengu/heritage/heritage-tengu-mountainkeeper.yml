@@ -26,6 +26,7 @@ inc:
           # simple description
           - paste: cantrip/vitality-lash
           - paste: spell-attack
+            id: inate-spell-attack
             ability: "CHA"
           - hr:
             light: true
