@@ -31,7 +31,7 @@ inc:
                 inputs:
                   - span: "1 +"
                   - field:
-                    ref: focus-rank
+                    eq: "%{focus-rank}-1"
                     label: "_{Rank}"
               - flags:
                 - "_{Vitality}"
