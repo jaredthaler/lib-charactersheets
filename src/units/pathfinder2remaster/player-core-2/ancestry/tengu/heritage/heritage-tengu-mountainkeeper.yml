@@ -26,7 +26,7 @@ inc:
           # simple description
           - paste: cantrip/vitality-lash
           - paste: spell-attack
-            ability: "CHA"
+            ability: "cha"
           - hr:
             light: true
           - p: "_{When casting a spell from Tengu feats, decide whether it's divine or primal.}"
