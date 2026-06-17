@@ -23,9 +23,9 @@ inc:
           - p: "_{Ignore concealment due to rain or fog.}"
           # damage resist
           - paste: leveled-damage-resist
-              params 
-                id: tengu/stormtossed/electricity-resistance
-                type: "_{Electricity}"
+            params 
+              id: tengu/stormtossed/electricity-resistance
+              type: "_{Electricity}"
 
 
   # add a damage resist
