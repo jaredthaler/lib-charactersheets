@@ -36,7 +36,7 @@ inc:
         title: "_{Tengu}"
         contents:
           - flags:
-              - "_{Ratfolk}"
+              - "_{Tengu}"
               - "_{Humanoid}"
           - field: ancestry-speed
             frame: right
