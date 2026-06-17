@@ -58,9 +58,10 @@ inc:
               - "_{Finesse}"
               - "_{Unarmed}"
 
+  #suppress ethnicity, Tengu are too long as it is.
   - at: '@ethnicity'
     replace:
-      - nothing:
+      - spacer:
 
   # add a natural weapon
   - at: '@actions'
