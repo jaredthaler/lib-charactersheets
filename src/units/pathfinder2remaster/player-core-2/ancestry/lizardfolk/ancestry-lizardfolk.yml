@@ -80,9 +80,9 @@ inc:
                   - "_{Finesse}"
                   - "_{Unarmed}"
 
+  #suppress ethnicity, Lizardfolk are too long as it is.
   - at: '@ethnicity'
     replace:
-      - nothing:
-
+      - spacer:
 
             
