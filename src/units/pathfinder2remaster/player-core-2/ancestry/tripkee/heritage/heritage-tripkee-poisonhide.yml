@@ -31,6 +31,7 @@ inc:
                   legend: "_{Poison Damage}"
                   suffix: "_{d4}"
                   width: large
+                  icon: d4
                   eq: "ceil(%{level}/2)"
                 inputs:
                   - ruby-round-up:
