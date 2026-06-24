@@ -70,7 +70,6 @@ inc:
             then:
               - field: "#{id}-ability"
                 label: "_{Key Ability}"
-                underlay: "_{Key Ability}"
                 ref: "=key-ability"
                 misc: true
             else:
