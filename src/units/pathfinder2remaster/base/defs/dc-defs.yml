@@ -78,7 +78,7 @@ inc:
 #                underlay: "_{#{ability}}"
 #                ref: "#{ability}"
 #                misc: true
-          - field: "#{id}-#{ability}"
+          - field: "#{id}-ability"
             label: "_{#{ability}}"
             underlay: "_{#{ability}}"
             ref: "#{ability}"
