@@ -5,7 +5,7 @@
 unit: class/remaster/wizard
 in: class
 group: "_{Player Core}"
-name: "_{Wizard}"
+name: "_{Wizard 2}"
 
 form:
   - select: wizard/thesis
