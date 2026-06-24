@@ -29,7 +29,8 @@ inc:
       subclass: witch-patron
       subclass-name: "_{Patron}"
       hp: 6
-
+      
+      spells: trained
       perception: trained
       unarmoured: trained
 
