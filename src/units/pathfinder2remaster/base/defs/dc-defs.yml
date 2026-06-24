@@ -66,18 +66,23 @@ inc:
           format: modifier
           eq: '%{#{id}-ability}+%{#{id}-proficiency-bonus}+%{#{id}-misc}'
         inputs:
-          - if: "#{ability}=="
-            then:
-              - field: "#{id}-ability"
-                label: "_{Key Ability}"
-                ref: "=key-ability"
-                misc: true
-            else:
-              - field: "#{id}-ability"
-                label: "_{#{ability}}"
-                underlay: "_{#{ability}}"
-                ref: "#{ability}"
-                misc: true
+#          - if: "#{ability}=="
+#            then:
+#              - field: "#{id}-ability"
+#                label: "_{Key Ability}"
+#                ref: "=key-ability"
+#                misc: true
+#            else:
+#              - field: "#{id}-ability"
+#                label: "_{#{ability}}"
+#                underlay: "_{#{ability}}"
+#                ref: "#{ability}"
+#                misc: true
+          - field: "#{id}-WIS"
+            label: "_{#{WIS}}"
+            underlay: "_{#{WIS}}"
+            ref: "#{ability}"
+            misc: true
           - span: "+"
           - field: "#{id}-proficiency"
             label: "_{Proficiency}"
