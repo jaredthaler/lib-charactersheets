@@ -33,7 +33,7 @@ inc:
   - paste: prototype-class
     params:
       class: wizard
-      class-name: "_{Wizard}"
+      class-name: "_{Wizard 2}"
       subclass: arcane-thesis
       subclass-name: "_{Arcane Thesis}"
       hp: 6
