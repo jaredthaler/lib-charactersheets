@@ -5,7 +5,7 @@
 unit: class/remaster/wizard
 in: class
 group: "_{Player Core}"
-name: "_{Wizard 2}"
+name: "_{Wizard}"
 
 form:
   - select: wizard/thesis
@@ -33,7 +33,7 @@ inc:
   - paste: prototype-class
     params:
       class: wizard
-      class-name: "_{Wizard 2}"
+      class-name: "_{Wizard}"
       subclass: arcane-thesis
       subclass-name: "_{Arcane Thesis}"
       hp: 6
@@ -66,7 +66,7 @@ inc:
       - paste: 10mins
         contents:
           - p:
-            title: "_{Identify Magic (Arcana/other/lettuce)}"
+            title: "_{Identify Magic (Arcana/other)}"
             content: "_{Take 10 minutes to identify a magical item, location or effect.}"
             colour: INT
 
@@ -245,8 +245,7 @@ inc:
                           - paste: spell-attack
                             params:
                               id: spell-attack
-                              ability: WIS
-                              legend: "_{Spell\nAttack 2}"
+                              legend: "_{Spell\nAttack}"
 
                           - paste: spell-dc
                             params:
