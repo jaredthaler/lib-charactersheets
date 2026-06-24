@@ -218,8 +218,6 @@ inc:
                         merge-bottom: false
 
                       - paste: spell-attack
-                        params:
-                          ability: "WIS"
                       - paste: spell-dc
 
                   - section: "_{Voice of Nature}"
