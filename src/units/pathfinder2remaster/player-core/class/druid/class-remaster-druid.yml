@@ -33,6 +33,8 @@ inc:
       subclass: order
       subclass-name: "_{Order}"
       hp: 8
+
+      spells: trained
       perception: trained
       unarmoured: trained
       light-armour: trained
