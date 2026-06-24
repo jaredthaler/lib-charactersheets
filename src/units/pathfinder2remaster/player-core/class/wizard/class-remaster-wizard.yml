@@ -38,6 +38,7 @@ inc:
       subclass-name: "_{Arcane Thesis}"
       hp: 6
 
+      spells: trained
       perception: trained
       unarmoured: trained
       skill: arcana
