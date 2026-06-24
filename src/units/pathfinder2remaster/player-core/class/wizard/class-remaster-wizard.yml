@@ -246,7 +246,7 @@ inc:
                             params:
                               id: spell-attack
                               ability: WIS
-                              legend: "_{Spell\nAttack}"
+                              legend: "_{Spell\nAttack 2}"
 
                           - paste: spell-dc
                             params:
