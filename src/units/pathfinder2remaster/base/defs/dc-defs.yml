@@ -78,10 +78,10 @@ inc:
 #                underlay: "_{#{ability}}"
 #                ref: "#{ability}"
 #                misc: true
-          - field: "#{id}-WIS"
-            label: "_{WIS}"
-            underlay: "_{WIS}"
-            ref: "WIS"
+          - field: "#{id}-#{ability}"
+            label: "_{#{ability}}"
+            underlay: "_{#{ability}}"
+            ref: "#{ability}"
             misc: true
           - span: "+"
           - field: "#{id}-proficiency"
