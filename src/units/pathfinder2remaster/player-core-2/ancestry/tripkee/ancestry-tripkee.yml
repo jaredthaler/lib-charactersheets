@@ -54,7 +54,6 @@ inc:
           - paste: low-light-vision
           - hr:
             light: true
-          - p: "_{short descripitons"
           - value-block: "+2"
             width: medium
             content: "_{to Athletics checks to Climb}"
