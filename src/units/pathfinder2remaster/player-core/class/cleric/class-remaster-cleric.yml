@@ -24,7 +24,9 @@ require:
     unit: class/remaster/cleric/reference
   
 inc:
-
+  - set: key-ability
+    value: WIS   
+        
   - paste: prototype-class
     params:
       class: cleric
@@ -34,7 +36,7 @@ inc:
 
       spells: trained
       unarmoured: trained
-      unarmed: traomed
+      unarmed: trained
 
       perception: trained
       religion: trained
@@ -50,10 +52,7 @@ inc:
 #        underlay: "_{WIS}"
 #        ref: WIS
 
-  - paste: prototype-key-ability
-    params:
-      ability: WIS
-      
+   
   - at: '@skill-actions'
     add:
       - paste: 10mins
