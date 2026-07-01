@@ -110,9 +110,5 @@ inc:
     params:
       key-ability: 
     contents:
-      - at: '@key-ability-field'
-        replace:
-          - field:
-            label: "#{key-ability}"
-            underlay: "#{key-ability}"
-            ref: "#{key-ability}"
+      - set: key-ability
+        value: #{key-ability}
