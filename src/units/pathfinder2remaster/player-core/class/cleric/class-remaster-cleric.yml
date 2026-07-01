@@ -25,7 +25,7 @@ require:
   
 inc:
   - set: key-ability
-    value: WIS   
+    value: "WIS"   
         
   - paste: prototype-class
     params:
