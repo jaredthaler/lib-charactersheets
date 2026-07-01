@@ -28,8 +28,7 @@ inc:
     # add a heritage savign throw reaction with a numeric bonus
   - at: '@saving-throws'
     add:
-      - article:
+      - p:
         title: "_{Stickytoe Tripkee}"
-        contets:
-          - value-block: "_{+2}"
-            content: "_{Fortitude and Reflex DC vs Disarm, Shove, Reposition, or Trip}"
+      - value-block: "_{+2}"
+        content: "_{Fortitude and Reflex DC vs Disarm, Shove, Reposition, or Trip}"
