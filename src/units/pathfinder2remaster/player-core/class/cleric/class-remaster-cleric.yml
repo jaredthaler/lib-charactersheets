@@ -43,13 +43,17 @@ inc:
       reflex: trained
       will: expert
 
-  - at: '@key-ability-field'
-    replace:
-      - field:
-        label: "_{WIS}"
-        underlay: "_{WIS}"
-        ref: WIS
+#  - at: '@key-ability-field'
+#    replace:
+#      - field:
+#        label: "_{WIS}"
+#        underlay: "_{WIS}"
+#        ref: WIS
 
+  - paste: prototype-key-ability
+    params:
+      key-ability: WIS
+      
   - at: '@skill-actions'
     add:
       - paste: 10mins
