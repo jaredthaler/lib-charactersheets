@@ -25,7 +25,7 @@ inc:
           - p: "_{Upgraded success on Athletics to climb vines and foliage.}"
             icon: save-crit-succeed
 
-    # add a heritage savign throw reaction with a numeric bonus
+  # add a heritage savign throw numeric bonus
   - at: '@saving-throws'
     add:
       - p:
