@@ -108,7 +108,7 @@ inc:
 
   - copy: prototype-key-ability
     params:
-      key-ability: 
+      ability: 
     contents:
       - set: key-ability
-        value: #{key-ability}
+        value: "#{ability}"
