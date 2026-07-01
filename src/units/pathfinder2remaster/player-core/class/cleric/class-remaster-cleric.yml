@@ -52,7 +52,7 @@ inc:
 
   - paste: prototype-key-ability
     params:
-      key-ability: WIS
+      ability: WIS
       
   - at: '@skill-actions'
     add:
