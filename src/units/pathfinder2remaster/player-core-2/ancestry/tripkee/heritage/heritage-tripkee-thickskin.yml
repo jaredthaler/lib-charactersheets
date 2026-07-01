@@ -2,16 +2,16 @@
 # This file is licensed under the ORC License.
 # See the ORC Notice within this repository.
 
-unit: heritage/tripkee/remaster/snaptongue
+unit: heritage/tripkee/remaster/thickskin
 in: heritage/lost-omens/mwangi-expanse/grippli
 group: "_{Player Core 2}"
-name: "_{Snaptongue Tripkee}"
+name: "_{Thickskin Tripkee}"
 # enabled: false
 
 inc:
   # set the heritage name
   - set: heritage
-    value: "_{Snaptongue Tripkee}"
+    value: "_{Thickskin Tripkee}"
   - set: hp-ancestry
     value: 8
     priority: high
@@ -21,7 +21,7 @@ inc:
   - at: '@heritage'
     replace:
       - article:
-        title: "_{Snaptongue Tripkee}"
+        title: "_{Thickskin Tripkee}"
         contents:
           # simple description
           - value-block: "+1"
