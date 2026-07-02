@@ -6739,7 +6739,6 @@
                   "type": "section",
                   "title": "_{Focus}",
                   "id": "focus",
-                  "flex": "large",
                   "contents": [
                     {
                       "type": "row",
@@ -8493,28 +8492,36 @@
                               "misc": true
                             },
                             {
-                              "type": "field",
+                              "type": "row",
                               "label": "",
+                              "misc": false,
                               "legend": "",
                               "colspan": 1,
                               "rowspan": 1,
-                              "id": "fortitude-upgrade-success",
-                              "control": "boost",
-                              "down": false,
-                              "frame": "none",
-                              "width": "tiny"
-                            },
-                            {
-                              "type": "field",
-                              "label": "",
-                              "legend": "",
-                              "colspan": 1,
-                              "rowspan": 1,
-                              "id": "fortitude-reduce-fail",
-                              "control": "boost",
-                              "down": false,
-                              "frame": "none",
-                              "width": "tiny"
+                              "narrow": true,
+                              "contents": [
+                                {
+                                  "type": "spacer"
+                                },
+                                {
+                                  "type": "field",
+                                  "id": "fortitude-reduce-fail",
+                                  "control": "checkbox",
+                                  "style": "progress"
+                                },
+                                {
+                                  "type": "field",
+                                  "id": "fortitude-auto-success",
+                                  "control": "checkbox",
+                                  "style": "progress"
+                                },
+                                {
+                                  "type": "field",
+                                  "id": "fortitude-upgrade-success",
+                                  "control": "checkbox",
+                                  "style": "progress"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -8582,28 +8589,36 @@
                               "misc": true
                             },
                             {
-                              "type": "field",
+                              "type": "row",
                               "label": "",
+                              "misc": false,
                               "legend": "",
                               "colspan": 1,
                               "rowspan": 1,
-                              "id": "reflex-upgrade-success",
-                              "control": "boost",
-                              "down": false,
-                              "frame": "none",
-                              "width": "tiny"
-                            },
-                            {
-                              "type": "field",
-                              "label": "",
-                              "legend": "",
-                              "colspan": 1,
-                              "rowspan": 1,
-                              "id": "reflex-reduce-fail",
-                              "control": "boost",
-                              "down": false,
-                              "frame": "none",
-                              "width": "tiny"
+                              "narrow": true,
+                              "contents": [
+                                {
+                                  "type": "spacer"
+                                },
+                                {
+                                  "type": "field",
+                                  "id": "reflex-reduce-fail",
+                                  "control": "checkbox",
+                                  "style": "progress"
+                                },
+                                {
+                                  "type": "field",
+                                  "id": "reflex-auto-success",
+                                  "control": "checkbox",
+                                  "style": "progress"
+                                },
+                                {
+                                  "type": "field",
+                                  "id": "reflex-upgrade-success",
+                                  "control": "checkbox",
+                                  "style": "progress"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -8671,28 +8686,36 @@
                               "misc": true
                             },
                             {
-                              "type": "field",
+                              "type": "row",
                               "label": "",
+                              "misc": false,
                               "legend": "",
                               "colspan": 1,
                               "rowspan": 1,
-                              "id": "will-upgrade-success",
-                              "control": "boost",
-                              "down": false,
-                              "frame": "none",
-                              "width": "tiny"
-                            },
-                            {
-                              "type": "field",
-                              "label": "",
-                              "legend": "",
-                              "colspan": 1,
-                              "rowspan": 1,
-                              "id": "will-reduce-fail",
-                              "control": "boost",
-                              "down": false,
-                              "frame": "none",
-                              "width": "tiny"
+                              "narrow": true,
+                              "contents": [
+                                {
+                                  "type": "spacer"
+                                },
+                                {
+                                  "type": "field",
+                                  "id": "will-reduce-fail",
+                                  "control": "checkbox",
+                                  "style": "progress"
+                                },
+                                {
+                                  "type": "field",
+                                  "id": "will-auto-success",
+                                  "control": "checkbox",
+                                  "style": "progress"
+                                },
+                                {
+                                  "type": "field",
+                                  "id": "will-upgrade-success",
+                                  "control": "checkbox",
+                                  "style": "progress"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -8728,6 +8751,11 @@
                           "type": "label",
                           "label": "_{Item}",
                           "misc": false
+                        },
+                        {
+                          "type": "label",
+                          "label": "_{Upgrades}",
+                          "misc": false
                         }
                       ],
                       "_direct": true
@@ -8738,44 +8766,22 @@
                       "optional": true
                     },
                     {
-                      "type": "layout",
-                      "layout": "indent-rw",
+                      "type": "row",
+                      "optional": true,
                       "contents": [
                         {
                           "type": "p",
-                          "id": "save-upgrade-success",
-                          "icon": "save-crit-succeed",
-                          "title": "_{Upgrade success}",
-                          "content": "_{When you roll a success, it becomes critical success}"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "layout",
-                      "layout": "indent-r",
-                      "contents": [
-                        {
-                          "type": "p",
-                          "id": "save-reduce-fail",
-                          "icon": "save-fail",
-                          "title": "_{Reduce failure}",
-                          "content": "_{When you roll a critical failure, it becomes failure}"
+                          "content": "Crit Failure &rarr; Failure &rarr; Success &rarr; Crit Success",
+                          "id": "save-upgrades"
                         }
                       ]
                     },
                     {
                       "type": "arrow",
                       "direction": "right-up",
-                      "from": "p-save-upgrade-success",
-                      "to": "field-will-upgrade-success",
-                      "anchor": "to"
-                    },
-                    {
-                      "type": "arrow",
-                      "direction": "right-up",
-                      "from": "p-save-reduce-fail",
-                      "to": "field-will-reduce-fail",
-                      "anchor": "to"
+                      "from": "p-save-upgrades",
+                      "to": "field-will-auto-success",
+                      "optional": true
                     },
                     {
                       "type": "hr",
@@ -8800,6 +8806,13 @@
                       "id": "saving-throws-conditional-2",
                       "frame": "none",
                       "align": "left",
+                      "width": "stretch"
+                    },
+                    {
+                      "type": "field",
+                      "id": "saving-throws-conditional-3",
+                      "frame": "none",
+                      "align": "left",
                       "width": "stretch",
                       "merge-bottom": true
                     },
@@ -8813,6 +8826,7 @@
                     {
                       "type": "list",
                       "hr": true,
+                      "light": true,
                       "zebra": true,
                       "contents": [
                         {

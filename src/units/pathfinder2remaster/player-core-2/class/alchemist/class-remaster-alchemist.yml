@@ -6,7 +6,7 @@ unit: class/remaster/alchemist
 in: class
 group: "_{Player Core 2}"
 name: "_{Alchemist}"
-enabled: false
+# enabled: false
 
 require:
   - unit: weapon-spec/slow
@@ -57,16 +57,19 @@ inc:
   - set: crafting-proficiency
     value: trained
 
-  - at: '@key-ability-field'
+  - set: key-attribute
+    value: INT
+
+  - at: '@key-attribute-field'
     replace:
-      - field: key-ability
+      - field: key-attribute
         label: "_{INT}"
         underlay: "_{INT}"
         ref: INT
 
-  - at: '@familiar/key-ability'
+  - at: '@familiar/key-attribute'
     replace:
-      - field: familiar-key-ability-mod
+      - field: familiar-key-attribute-mod
         ref: INT
         underlay: "_{INT}"
         label: "_{INT}"
@@ -147,10 +150,14 @@ inc:
     add:
       - level: 11
         contents:
-          - paste: juggernaut
+          - paste: improved-save-fort
+            params:
+              title: "_{Chemical Hardiness}"
       - level: 15
         contents:
-          - paste: evasion
+          - paste: improved-save-ref
+            params:
+              title: "_{Explosion Dodger}"
 
   - at: '@pages'
     add:
@@ -173,6 +180,7 @@ inc:
                         params:
                           id: alchemist-class-dc
                           legend: "_{Alchemist\nClass DC}"
+                          attribute: INT
 
                       - row:
                         contents:
@@ -455,15 +463,34 @@ inc:
                                       - field: alchemist/formula-#{i}
                                         frame: none
                                         width: stretch
-                                      - span: "1"
+                                      - level-marker: "1"
+                                        marker: "_{Level}"
                         
                       - list:
                         columns: 3
                         gutter: small
                         merge-bottom: true
                         contents:
-                          - repeat: 24
+                          - repeat: 3
+                            contents:
+                              - row:
+                                contents:
+                                  - field: alchemist/formula-#{i}
+                                    frame: none
+                                    width: stretch
+                                  - field: alchemist/formula-#{i}/level
+                                    label: "_{Level}"
+                                    width: small
+
+                          # - repeat: 3
+                          #   contents:
+                          #     - row:
+                          #       contents:
+                          #         - spacer:
+                          #         - label: "_{Level}"
+                          - repeat: 21
                             reduce: 6
+                            start: 4
                             contents:
                               - row:
                                 contents:

@@ -19,6 +19,7 @@
       "witch/patron": "witch/patron/wilding-steward",
       "wizard/thesis": "wizard/thesis/staff-nexus",
       "wizard/school": "wizard/school/unified-magical-theory",
+      "remaster/alchemist/research-field": "",
       "archetypes": ["xxx/archetype/remaster/wizard"],
       "inventoryStyle": "double",
       "optionCover": true,

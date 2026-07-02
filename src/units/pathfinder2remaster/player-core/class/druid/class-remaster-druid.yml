@@ -125,16 +125,16 @@ inc:
         width: stretch
         align: left
 
-  - at: '@key-ability-field'
+  - at: '@key-attribute-field'
     replace:
-      - field: key-ability
+      - field: key-attribute
         label: "_{WIS}"
         underlay: "_{WIS}"
         ref: WIS
         
-  - at: '@familiar/key-ability'
+  - at: '@familiar/key-attribute'
     replace:
-      - field: druid:familiar/key-ability
+      - field: druid:familiar/key-attribute
         label: "_{WIS}"
         underlay: "_{WIS}"
         ref: WIS

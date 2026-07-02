@@ -106,13 +106,13 @@ inc:
                 width: stretch
                 align: left
 
-  - copy: prototype-key-ability
+  - copy: prototype-key-attribute
     params:
-      key-ability: 
+      key-attribute: 
     contents:
-      - at: '@key-ability-field'
+      - at: '@key-attribute-field'
         replace:
           - field:
-            label: "#{key-ability}"
-            underlay: "#{key-ability}"
-            ref: "#{key-ability}"
+            label: "#{key-attribute}"
+            underlay: "#{key-attribute}"
+            ref: "#{key-attribute}"

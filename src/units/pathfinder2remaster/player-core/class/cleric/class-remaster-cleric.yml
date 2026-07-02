@@ -43,7 +43,7 @@ inc:
       reflex: trained
       will: expert
 
-  - at: '@key-ability-field'
+  - at: '@key-attribute-field'
     replace:
       - field:
         label: "_{WIS}"

@@ -46,16 +46,16 @@ inc:
       reflex: trained
       will: expert
 
-  - at: '@key-ability-field'
+  - at: '@key-attribute-field'
     replace:
-      - field: key-ability
+      - field: key-attribute
         label: "_{INT}"
         underlay: "_{INT}"
         ref: INT
 
-  - at: '@familiar/key-ability'
+  - at: '@familiar/key-attribute'
     replace:
-      - field: familiar/key-ability
+      - field: familiar/key-attribute
         label: "_{INT}"
         underlay: "_{INT}"
         ref: INT
