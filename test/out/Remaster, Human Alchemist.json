@@ -11571,51 +11571,77 @@
                           "type": "g",
                           "contents": [
                             {
-                              "type": "field",
-                              "id": "alchemist/research-field",
-                              "size": "huge",
-                              "width": "stretch",
-                              "frame": "none",
-                              "merge-bottom": true
+                              "type": "h4",
+                              "title": "_{Toxicologist}"
                             },
                             {
                               "type": "hr",
                               "swash": true
                             },
                             {
-                              "type": "h5",
-                              "title": "_{Field Benefit}"
-                            },
-                            {
-                              "type": "field",
-                              "id": "alchemist/research-field/benefit",
-                              "frame": "none",
-                              "width": "stretch",
-                              "merge-bottom": true,
-                              "control": "p",
-                              "lines": 2,
-                              "with-title": false
+                              "type": "layout",
+                              "layout": "2e",
+                              "contents": [
+                                {
+                                  "type": "g",
+                                  "contents": [
+                                    {
+                                      "type": "h5",
+                                      "title": "_{Field Benefit}"
+                                    },
+                                    {
+                                      "type": "layout",
+                                      "layout": "indent-l",
+                                      "blk": false,
+                                      "order": 1,
+                                      "contents": [
+                                        {
+                                          "type": "g",
+                                          "contents": [
+                                            {
+                                              "type": "icon",
+                                              "icon": "action"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "g",
+                                          "contents": [
+                                            {
+                                              "type": "p",
+                                              "content": "_{Apply a poison to a weapon.}"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "p",
+                                      "content": "_{Combine an acid and an infused poison to deal acid damage instead of poison.}"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "g",
+                                  "contents": [
+                                    {
+                                      "type": "h5",
+                                      "title": "_{Field Vials}"
+                                    },
+                                    {
+                                      "type": "p",
+                                      "content": "_{Your versatile vials are poison instead of acid.}"
+                                    },
+                                    {
+                                      "type": "p",
+                                      "content": "_{You can apply a vial to a weapon as an injury poison that deals the vial's initial damage.}"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
-                          ]
-                        },
-                        {
-                          "type": "g",
-                          "contents": [
-                            {
-                              "type": "h5",
-                              "title": "_{Field Vials}"
-                            },
-                            {
-                              "type": "field",
-                              "id": "alchemist/research-field/vials",
-                              "frame": "none",
-                              "width": "stretch",
-                              "merge-bottom": true,
-                              "control": "p",
-                              "lines": 2,
-                              "with-title": false
-                            }
-                          ]
+                          ],
+                          "replace": true
                         },
                         {
                           "type": "layout",
@@ -11641,14 +11667,26 @@
                                   "title": "_{Field Discovery}"
                                 },
                                 {
-                                  "type": "field",
-                                  "id": "alchemist/research-field/discovery",
-                                  "frame": "none",
-                                  "width": "stretch",
-                                  "merge-bottom": true,
-                                  "control": "p",
-                                  "lines": 2,
-                                  "with-title": false
+                                  "type": "calc",
+                                  "output": {
+                                    "type": "field",
+                                    "id": "remaster/alchemist/research-field/toxicologist:poison-resistance",
+                                    "legend": "_{Poison Resistance}",
+                                    "width": "large",
+                                    "border": "full",
+                                    "eq": "%{level}/2"
+                                  },
+                                  "input": [
+                                    {
+                                      "type": "field",
+                                      "ref": "level",
+                                      "label": "_{Level}"
+                                    },
+                                    {
+                                      "type": "span",
+                                      "content": "&div; 2"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -11678,14 +11716,8 @@
                                   "title": "_{Advanced Vials}"
                                 },
                                 {
-                                  "type": "field",
-                                  "id": "alchemist/research-field/advanced-vials",
-                                  "frame": "none",
-                                  "width": "stretch",
-                                  "merge-bottom": true,
-                                  "control": "p",
-                                  "lines": 2,
-                                  "with-title": false
+                                  "type": "p",
+                                  "content": "_{When you damage a creature with a vial used as an injury poison, deal persistent damage equal to its splash damage.}"
                                 }
                               ]
                             }
@@ -11715,14 +11747,8 @@
                                   "title": "_{Greater Field Discovery}"
                                 },
                                 {
-                                  "type": "field",
-                                  "id": "alchemist/research-field/greater-discovery",
-                                  "frame": "none",
-                                  "width": "stretch",
-                                  "merge-bottom": true,
-                                  "control": "p",
-                                  "lines": 2,
-                                  "with-title": false
+                                  "type": "p",
+                                  "content": "_{When a creature fails its save against your infused injury poison, a second creature next to it is exposed to the poison.}"
                                 }
                               ]
                             }
@@ -11738,90 +11764,168 @@
                   "flex": "large",
                   "contents": [
                     {
-                      "type": "layout",
-                      "layout": "2e",
-                      "flex": false,
-                      "gutter": "small",
-                      "blk": false,
-                      "merge-bottom": false,
-                      "contents": [
+                      "type": "table",
+                      "rows": [
                         {
-                          "contents": [
+                          "params": {
+                            "n": 1,
+                            "i": 1
+                          },
+                          "cells": [
                             {
-                              "type": "row",
-                              "contents": [
-                                {
-                                  "type": "field",
-                                  "id": "alchemist/formula-1",
-                                  "frame": "none",
-                                  "width": "stretch"
-                                },
-                                {
-                                  "type": "level-marker",
-                                  "level": "1",
-                                  "marker": "_{Level}"
-                                }
-                              ]
+                              "type": "field",
+                              "label": "",
+                              "align": "left",
+                              "legend": "",
+                              "colspan": 1,
+                              "rowspan": 1,
+                              "id": "alchemist-toxin-1",
+                              "width": "stretch",
+                              "underlay": "1"
+                            },
+                            {
+                              "type": "field",
+                              "label": "",
+                              "misc": false,
+                              "legend": "",
+                              "colspan": 1,
+                              "rowspan": 1,
+                              "id": "alchemist-toxin-1-level",
+                              "width": "small"
+                            },
+                            {
+                              "type": "field",
+                              "label": "",
+                              "misc": false,
+                              "legend": "",
+                              "colspan": 1,
+                              "rowspan": 1,
+                              "id": "alchemist-toxin-1-type",
+                              "width": "huge"
+                            },
+                            {
+                              "type": "field",
+                              "label": "",
+                              "misc": false,
+                              "legend": "",
+                              "colspan": 1,
+                              "rowspan": 1,
+                              "id": "alchemist-toxin-1-bonus",
+                              "prefix": "+",
+                              "border": "full"
+                            },
+                            {
+                              "type": "field",
+                              "label": "",
+                              "misc": false,
+                              "legend": "",
+                              "colspan": 1,
+                              "rowspan": 1,
+                              "id": "alchemist-toxin-1-effect",
+                              "width": "stretch"
                             }
-                          ],
-                          "columns": 1,
-                          "blk": false,
-                          "flowv": true,
-                          "zebra": false,
-                          "zebra-inverse": false,
-                          "flex": false,
-                          "sort": true,
-                          "hr": false,
-                          "vr": false,
-                          "light": false,
-                          "merge-bottom": false,
-                          "avoid-shade": false,
-                          "flatten": false,
-                          "unblk": true,
-                          "header": [],
-                          "footer": [],
-                          "type": "list",
-                          "gutter": "small"
+                          ]
                         },
                         {
-                          "contents": [
+                          "params": {
+                            "n": 2,
+                            "i": 2
+                          },
+                          "cells": [
                             {
-                              "type": "row",
-                              "contents": [
-                                {
-                                  "type": "field",
-                                  "id": "alchemist/formula-2",
-                                  "frame": "none",
-                                  "width": "stretch"
-                                },
-                                {
-                                  "type": "level-marker",
-                                  "level": "1",
-                                  "marker": "_{Level}"
-                                }
-                              ]
+                              "type": "field",
+                              "label": "",
+                              "align": "left",
+                              "legend": "",
+                              "colspan": 1,
+                              "rowspan": 1,
+                              "id": "alchemist-toxin-2",
+                              "width": "stretch",
+                              "underlay": "2"
+                            },
+                            {
+                              "type": "field",
+                              "label": "",
+                              "misc": false,
+                              "legend": "",
+                              "colspan": 1,
+                              "rowspan": 1,
+                              "id": "alchemist-toxin-2-level",
+                              "width": "small"
+                            },
+                            {
+                              "type": "field",
+                              "label": "",
+                              "misc": false,
+                              "legend": "",
+                              "colspan": 1,
+                              "rowspan": 1,
+                              "id": "alchemist-toxin-2-type",
+                              "width": "huge"
+                            },
+                            {
+                              "type": "field",
+                              "label": "",
+                              "misc": false,
+                              "legend": "",
+                              "colspan": 1,
+                              "rowspan": 1,
+                              "id": "alchemist-toxin-2-bonus",
+                              "prefix": "+",
+                              "border": "full"
+                            },
+                            {
+                              "type": "field",
+                              "label": "",
+                              "misc": false,
+                              "legend": "",
+                              "colspan": 1,
+                              "rowspan": 1,
+                              "id": "alchemist-toxin-2-effect",
+                              "width": "stretch"
                             }
-                          ],
-                          "columns": 1,
-                          "blk": false,
-                          "flowv": true,
-                          "zebra": false,
-                          "zebra-inverse": false,
-                          "flex": false,
-                          "sort": true,
-                          "hr": false,
-                          "vr": false,
-                          "light": false,
-                          "merge-bottom": false,
-                          "avoid-shade": false,
-                          "flatten": false,
-                          "unblk": true,
-                          "header": [],
-                          "footer": [],
-                          "type": "list",
-                          "gutter": "small"
+                          ]
                         }
-                      ]
+                      ],
+                      "flip": false,
+                      "width": "stretch",
+                      "blk": false,
+                      "merge-bottom": true,
+                      "zebra": false,
+                      "collapse": false,
+                      "fixed": false,
+                      "layout": false,
+                      "_headings": [
+                        {
+                          "type": "label",
+                          "label": "_{Toxin}",
+                          "align": "left"
+                        },
+                        {
+                          "type": "label",
+                          "label": "_{Level}",
+                          "misc": false
+                        },
+                        {
+                          "type": "label",
+                          "label": "_{Type}",
+                          "misc": false
+                        },
+                        {
+                          "type": "label",
+                          "label": "_{Bonus}",
+                          "misc": false
+                        },
+                        {
+                          "type": "label",
+                          "label": "_{Effect}",
+                          "misc": false
+                        }
+                      ],
+                      "_direct": true
+                    },
+                    {
+                      "type": "hr"
                     },
                     {
                       "type": "layout",
