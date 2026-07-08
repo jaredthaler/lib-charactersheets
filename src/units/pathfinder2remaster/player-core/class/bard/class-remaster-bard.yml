@@ -95,7 +95,7 @@ inc:
         proficiency: master
         colour: WIS
       - level: 11
-        advance: "_{Simple weapons}, _{Longsword}, _{Rapier}, _{Sap}, _{Shortbow}, _{Shortsword}, _{Whip}"
+        advance: "_{Simple weapons}, _{Martial weapons}, _{Unarmed attacks}"
         proficiency: expert
       - level: 11
         advance: "_{Perception}"
