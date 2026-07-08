@@ -93,8 +93,40 @@ inc:
         value: "#{will}"
 
       # Skills
+      # added other skills
+      - set: "acrobatics-proficiency"
+        value: "#{acrobatics}"
+      - set: "arcana-proficiency"
+        value: "#{arcana}"
+      - set: "athletics-proficiency"
+        value: "#{athletics}"
+      - set: "crafting-proficiency"
+        value: "#{crafting}"
+      - set: "deception-proficiency"
+        value: "#{deception}"
+      - set: "diplomacy-proficiency"
+        value: "#{diplomacy}"
+      - set: "intimidation-proficiency"
+        value: "#{intimidation}"
+      - set: "medicine-proficiency"
+        value: "#{medicine}"
+      - set: "nature-proficiency"
+        value: "#{nature}"
       - set: "occultism-proficiency"
         value: "#{occultism}"
+      - set: "performance-proficiency"
+        value: "#{performance}"
+      - set: "religion-proficiency"
+        value: "#{religion}"
+      - set: "society-proficiency"
+        value: "#{society}"
+      - set: "stealth-proficiency"
+        value: "#{stealth}"
+      - set: "survival-proficiency"
+        value: "#{survival}"
+      - set: "thievery-proficiency"
+        value: "#{thievery}"
+
 
       - at: '@cover-class'
         replace:
