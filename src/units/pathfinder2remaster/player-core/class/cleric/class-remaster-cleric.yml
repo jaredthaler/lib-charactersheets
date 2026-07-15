@@ -178,7 +178,7 @@ inc:
                             legend: "_{Uses per day}"
                             width: large
                             border: full
-                            eq: "1+%{CHA}"
+                            eq: "4+floor((%{level}+5/10)"
                             
                           - span: "= 4"
 
