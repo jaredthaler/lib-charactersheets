@@ -178,7 +178,7 @@ inc:
                             legend: "_{Uses per day}"
                             width: large
                             border: full
-                            eq: "4"
+                            eq: "4+%{focus-rank}"
                             
                           - span: "= 4"
 
