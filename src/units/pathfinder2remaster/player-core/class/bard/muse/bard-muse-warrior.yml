@@ -29,9 +29,7 @@ inc:
     add:
       - paste: spell/fear
 
-  - at: '@spellbook/right/first'
-    add:
-      - paste: cantrip/detect-magic
+
 
 
   
