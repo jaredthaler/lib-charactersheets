@@ -7,6 +7,7 @@ in: feat/bard
 group: "_{Player Core}"
 name: "_{Martial Performance}"
 
+inc:
   - copy: feat/bard/remaster/martial-performance
     contents:
       - article:
