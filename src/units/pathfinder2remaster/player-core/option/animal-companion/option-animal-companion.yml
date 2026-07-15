@@ -152,7 +152,7 @@ inc:
                                 align: right
                               - "_{Skill\nBonus}"
                               - 
-                              - "_{attribute\nModifier}"
+                              - "_{Attribute\nModifier}"
                               - "_{Proficiency}"
                               - "_{Barding\nCheck\nPenalty}"
                             rows:
@@ -358,7 +358,7 @@ inc:
                                                 inputs:
                                                   - field: animal-companion/attack-#{i}-attribute
                                                     ref: true
-                                                    label: "_{attribute}"
+                                                    label: "_{Attribute}"
                                                     misc: true
                                                   - span: "+"
                                                   - field: animal-companion/attack-#{i}-proficiency
@@ -564,7 +564,7 @@ inc:
                                 columns:
                                   - 
                                   - 
-                                  - "_{attribute Modifier}"
+                                  - "_{Attribute Modifier}"
                                   - "_{Proficiency}"
                                 rows:
                                   - save: fortitude

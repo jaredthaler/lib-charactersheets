@@ -131,16 +131,22 @@ inc:
                                 contents:
                                   - row:
                                     contents:
-                                      - spacer:
                                       - field: gender
                                         label: "_{Gender}"
                                         icon: gender
+                                        width: large
+                                      - field: pronouns
+                                        label: "_{Pronouns}"
                                         width: huge
+                                        control: compound
+                                        parts:
+                                          - subid: pronoun-active
+                                            suffix: "/"
+                                          - subid: pronoun-passive
                                       - spacer:
                                       - field: age
                                         label: "_{Age}"
-                                        width: large
-                                      - spacer:
+                                        # width: large
                                       - field: size
                                         label: "_{Size}"
                                         icon: size
@@ -153,7 +159,6 @@ inc:
                                           - "_{Medium}"
                                           - "_{Large}"
                                           - "_{Huge}"
-                                      - spacer:
                                   - field: deity
                                     label: "_{Deity}"
                                     width: stretch
@@ -201,7 +206,7 @@ inc:
                                         contents:
                                           - field: "#{code}"
                                             label: "#{name}"
-                                            control: attribute
+                                            control: ability
                                             width: ""
                                             parts:
                                               - id: "key-attribute"
@@ -339,7 +344,7 @@ inc:
                                   - field: archetype-#{i}-feats
                                     frame: none
                                     control: progression
-                                    max: 4
+                                    max: 3
                                   - p: "_{of}"
                                     width: tiny
                                   - field: archetype-#{i}-num-feats

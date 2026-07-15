@@ -40,7 +40,7 @@ inc:
                   eq: "%{construct/attack-#{i}-attribute}+%{construct/attack-#{i}-proficiency-bonus}"
                 inputs:
                   - field: "construct/attack-#{i}-attribute"
-                    label: "_{attribute}"
+                    label: "_{Attribute}"
                     misc: true
                     control: ref-switch
                     switch: "construct/STR,construct/DEX"
@@ -430,7 +430,7 @@ inc:
                                 align: right
                               - "_{Skill\nBonus}"
                               - 
-                              - "_{attribute\nModifier}"
+                              - "_{Attribute\nModifier}"
                               - "_{Proficiency}"
                             rows:
                               - skill: acrobatics
@@ -757,7 +757,7 @@ inc:
                                 columns:
                                   - 
                                   - 
-                                  - "_{attribute Modifier}"
+                                  - "_{Attribute Modifier}"
                                   - "_{Proficiency}"
                                 rows:
                                   - save: fortitude

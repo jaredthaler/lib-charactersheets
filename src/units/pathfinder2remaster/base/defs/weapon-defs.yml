@@ -98,7 +98,7 @@ inc:
               - field: "#{id}-attribute"
                 ref: true
                 misc: true
-                label: "_{attribute}"
+                label: "_{Attribute}"
                 control: ref-switch
                 abilities: "str,dex"
               - field: "#{id}-proficiency"
@@ -193,7 +193,7 @@ inc:
                   - field: attack-#{i}-attribute
                     ref: true
                     misc: true
-                    label: "_{attribute}"
+                    label: "_{Attribute}"
                     control: ref-switch
                     abilities: "str,dex"
                   - field: attack-#{i}-proficiency
@@ -270,7 +270,7 @@ inc:
                 inputs:
                   - field: attack-#{i}-attribute
                     misc: true
-                    label: "_{attribute}"
+                    label: "_{Attribute}"
                     control: ref-switch
                     ref: "str,dex"
                   - field: attack-#{i}-proficiency
@@ -358,7 +358,7 @@ inc:
                   eq: "%{attack-#{i}-attribute}+%{attack-#{i}-proficiency-bonus}+%{attack-#{i}-misc}"
                 inputs:
                   - field: "#{id}-attack-#{i}-attribute"
-                    label: "_{attribute}"
+                    label: "_{Attribute}"
                     misc: true
                     control: ref-switch
                     ref: "str,dex"
@@ -435,7 +435,7 @@ inc:
                   eq: "%{attack-#{i}-attribute}+%{attack-#{i}-proficiency-bonus}+%{attack-#{i}-potency[rank]}+%{attack-#{i}-misc}"
                 inputs:
                   - field: "#{id}-attack-#{i}-attribute"
-                    label: "_{attribute}"
+                    label: "_{Attribute}"
                     misc: true
                     control: ref-switch
                     ref: "str,dex"
