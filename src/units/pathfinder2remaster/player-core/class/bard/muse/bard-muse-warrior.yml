@@ -8,7 +8,7 @@ group: "_{Player Core}"
 name: "_{Warrior}"
 
 require:
-  - unit: feat/bard/apg/martial-performance
+  - unit: feat/bard/remaster/martial-performance
   - unit: spell/fear
 
 inc:
@@ -22,7 +22,7 @@ inc:
 
   - at: '@bard/muse/bonus-feat'
     replace:
-      - paste: feat/bard/apg/martial-performance
+      - paste: feat/bard/remaster/martial-performance
 
   - at: '@spellbook/middle/first'
     add:
