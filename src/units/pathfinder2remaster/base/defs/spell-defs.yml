@@ -148,12 +148,13 @@ inc:
   - copy: heighten-spell
     params:
       rank: ""
+      level: ""
       content: ""
     contents:
       - if: "#{content}"
         then:
           - p:
-            title: "#{rank}"
+            title: "#{rank}#{level}"
             icon: up-arrow
             content: "#{content}"
         else:
