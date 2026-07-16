@@ -312,7 +312,7 @@ inc:
                                 legend: "_{Die}"
                                 underlay: "8"
                                 border: full
-                                prefix: "_{d}"
+                                prefix: d8
                                 eq: "(((%{##:divine-font/heal} || %{##:versatile-font}) && %{##:divine-font/healing-hands}) || ((%{##:divine-font/harm} || %{##:versatile-font}) && %{##:divine-font/harming-hands}))?10:8"
                               - spacer:
 
