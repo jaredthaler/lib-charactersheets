@@ -1,0 +1,25 @@
+# Copyright 2025 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: heritage/versatile/remaster/nephilim
+in: heritage/versatile
+group: "_{Player Core}"
+name: "_{Nephilim}"
+
+require:
+  - unit: optional-darkvision
+
+inc:
+  - set: heritage
+    value: "_{Nephilim}"
+
+  - at: '@heritage'
+    replace:
+      - article:
+        title: "_{Nephilim}"
+        contents:
+          - flags:
+              - "_{Nephilim}"
+          - p: "_{May take nephilim feats.}"
+          - paste: optional-darkvision

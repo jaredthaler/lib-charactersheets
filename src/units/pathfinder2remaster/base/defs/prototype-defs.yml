@@ -14,6 +14,8 @@ inc:
       subclass:
       subclass-name:
       hp:
+      key-attribute:
+
       perception: trained
       unarmoured:
       light-armour:
@@ -54,6 +56,11 @@ inc:
       - set: subclass-label
         value: "#{subclass-name}"
 
+      - if: "#{key-attribute}"
+        then:
+          - set: key-attribute
+            value: "#{key-attribute}"
+
       # Class DC
       - set: "#{class}-class-dc-proficiency"
         value: trained
@@ -93,8 +100,38 @@ inc:
         value: "#{will}"
 
       # Skills
+      - set: "acrobatics-proficiency"
+        value: "#{acrobatics}"
+      - set: "arcana-proficiency"
+        value: "#{arcana}"
+      - set: "athletics-proficiency"
+        value: "#{athletics}"
+      - set: "crafting-proficiency"
+        value: "#{crafting}"
+      - set: "deception-proficiency"
+        value: "#{deception}"
+      - set: "diplomacy-proficiency"
+        value: "#{diplomacy}"
+      - set: "intimidation-proficiency"
+        value: "#{intimidation}"
+      - set: "medicine-proficiency"
+        value: "#{medicine}"
+      - set: "nature-proficiency"
+        value: "#{nature}"
       - set: "occultism-proficiency"
         value: "#{occultism}"
+      - set: "performance-proficiency"
+        value: "#{performance}"
+      - set: "religion-proficiency"
+        value: "#{religion}"
+      - set: "society-proficiency"
+        value: "#{society}"
+      - set: "stealth-proficiency"
+        value: "#{stealth}"
+      - set: "survival-proficiency"
+        value: "#{survival}"
+      - set: "thievery-proficiency"
+        value: "#{thievery}"
 
       - at: '@cover-class'
         replace:
@@ -106,9 +143,13 @@ inc:
                 width: stretch
                 align: left
 
-  - copy: prototype-key-ability
+  - copy: prototype-key-attribute
     params:
-      ability: 
+      key-attribute: 
     contents:
-      - set: key-ability
-        value: "#{ability}"
+      - at: '@key-attribute-field'
+        replace:
+          - field:
+            label: "#{key-attribute}"
+            underlay: "#{key-attribute}"
+            ref: "#{key-attribute}"

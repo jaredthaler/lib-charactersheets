@@ -106,7 +106,7 @@ inc:
                         zebra: true
                         hr: true
                         contents:
-                          - g:
+                          - box:
                             contents:
                               - row:
                                 contents:
@@ -122,7 +122,7 @@ inc:
                                   - field: level
                                     legend: "_{Level}"
                                     border: circle
-                                    # frame: left
+                                    # frame: h-label
                                     format: int
                                     size: huge
                               - hr:
@@ -134,12 +134,19 @@ inc:
                                       - field: gender
                                         label: "_{Gender}"
                                         icon: gender
+                                        width: large
+                                      - field: pronouns
+                                        label: "_{Pronouns}"
                                         width: huge
+                                        control: compound
+                                        parts:
+                                          - subid: pronoun-active
+                                            suffix: "/"
+                                          - subid: pronoun-passive
                                       - spacer:
                                       - field: age
                                         label: "_{Age}"
-                                        width: large
-                                      - spacer:
+                                        # width: large
                                       - field: size
                                         label: "_{Size}"
                                         icon: size
@@ -152,7 +159,6 @@ inc:
                                           - "_{Medium}"
                                           - "_{Large}"
                                           - "_{Huge}"
-                                      # - spacer:
                                   - field: deity
                                     label: "_{Deity}"
                                     width: stretch
@@ -203,7 +209,7 @@ inc:
                                             control: ability
                                             width: ""
                                             parts:
-                                              - id: "key-ability"
+                                              - id: "key-attribute"
                                                 control: radio
                                                 value: "#{code}"
                                               - subid: ""
@@ -216,31 +222,17 @@ inc:
                                             label: "&half;"
                                             frame: left
 
-                              - field: ability-note
+                              - field: attribute-note
                                 width: stretch
                                 merge-bottom: true
 
                           - g:
                             contents:
                               - h5: "_{Proficiency}"
-                              # - row:
-                              #   contents:
-                              #     - g:
-                              #       contents:
-                              #         - h5: "_{Proficiency}"
-                              #     - spacer:
-                              #     - field: level
-                              #       label: "_{Level}"
-                              #       border: circle
-                              #       frame: left
-                              #       format: int
-                              #       size: huge
-
                               - zone: '@proficiency'
                                 contents:
                                   - layout: 5e
                                     gutter: none
-                                    # valign: top
                                     flex: none
                                     contents:
                                       - field: proficiency-untrained
@@ -352,7 +344,7 @@ inc:
                                   - field: archetype-#{i}-feats
                                     frame: none
                                     control: progression
-                                    max: 4
+                                    max: 3
                                   - p: "_{of}"
                                     width: tiny
                                   - field: archetype-#{i}-num-feats
@@ -376,7 +368,7 @@ inc:
                           - label: "_{Skill\nBonus}"
                             width: medium
                           -
-                          - label: "_{Ability\nModifier}"
+                          - label: "_{Attribute\nModifier}"
                             width: medium
                           - label: "_{Proficiency}"
                             width: medium
@@ -401,87 +393,87 @@ inc:
                                     contents:
                                       - skill: acrobatics
                                         name: "_{Acrobatics}"
-                                        ability: "_{DEX}"
-                                        abilityref: DEX
+                                        attribute: "_{DEX}"
+                                        attributeref: DEX
                                         acp: true
                                         acp_flexible: true
                                       - skill: arcana
                                         name: "_{Arcana}"
-                                        ability: "_{INT}"
-                                        abilityref: INT
+                                        attribute: "_{INT}"
+                                        attributeref: INT
                                         acp: false
                                       - skill: athletics
                                         name: "_{Athletics}"
-                                        ability: "_{STR}"
-                                        abilityref: STR
+                                        attribute: "_{STR}"
+                                        attributeref: STR
                                         acp: true
                                         acp_flexible: true
                                       - skill: crafting
                                         name: "_{Crafting}"
-                                        ability: "_{INT}"
-                                        abilityref: INT
+                                        attribute: "_{INT}"
+                                        attributeref: INT
                                         acp: false
                                       - skill: deception
                                         name: "_{Deception}"
-                                        ability: "_{CHA}"
-                                        abilityref: CHA
+                                        attribute: "_{CHA}"
+                                        attributeref: CHA
                                         acp: false
                                       - skill: diplomacy
                                         name: "_{Diplomacy}"
-                                        ability: "_{CHA}"
-                                        abilityref: CHA
+                                        attribute: "_{CHA}"
+                                        attributeref: CHA
                                         acp: false
                                       - skill: intimidation
                                         name: "_{Intimidation}"
-                                        ability: "_{CHA}"
-                                        abilityref: CHA
+                                        attribute: "_{CHA}"
+                                        attributeref: CHA
                                         acp: false
                                       - skill: medicine
                                         name: "_{Medicine}"
-                                        ability: "_{WIS}"
-                                        abilityref: WIS
+                                        attribute: "_{WIS}"
+                                        attributeref: WIS
                                         acp: false
                                       - skill: nature
                                         name: "_{Nature}"
-                                        ability: "_{WIS}"
-                                        abilityref: WIS
+                                        attribute: "_{WIS}"
+                                        attributeref: WIS
                                         acp: false
                                       - skill: occultism
                                         name: "_{Occultism}"
-                                        ability: "_{INT}"
-                                        abilityref: INT
+                                        attribute: "_{INT}"
+                                        attributeref: INT
                                         acp: false
                                       - skill: performance
                                         name: "_{Performance}"
-                                        ability: "_{CHA}"
-                                        abilityref: CHA
+                                        attribute: "_{CHA}"
+                                        attributeref: CHA
                                         acp: false
                                       - skill: religion
                                         name: "_{Religion}"
-                                        ability: "_{WIS}"
-                                        abilityref: WIS
+                                        attribute: "_{WIS}"
+                                        attributeref: WIS
                                         acp: false
                                       - skill: society
                                         name: "_{Society}"
-                                        ability: "_{INT}"
-                                        abilityref: INT
+                                        attribute: "_{INT}"
+                                        attributeref: INT
                                         acp: false
                                         acp_flexible: false
                                       - skill: stealth
                                         name: "_{Stealth}"
-                                        ability: "_{DEX}"
-                                        abilityref: DEX
+                                        attribute: "_{DEX}"
+                                        attributeref: DEX
                                         acp: true
                                       - skill: survival
                                         name: "_{Survival}"
-                                        ability: "_{WIS}"
-                                        abilityref: WIS
+                                        attribute: "_{WIS}"
+                                        attributeref: WIS
                                         acp: false
                                         acp_flexible: false
                                       - skill: thievery
                                         name: "_{Thievery}"
-                                        ability: "_{DEX}"
-                                        abilityref: DEX
+                                        attribute: "_{DEX}"
+                                        attributeref: DEX
                                         acp: true
                                         fade: false
                                   - slots:
@@ -491,8 +483,8 @@ inc:
                                     placeholder:
                                       - skill: "lore-#{j}"
                                         name: "_{Lore}:"
-                                        ability: "_{INT}"
-                                        abilityref: INT
+                                        attribute: "_{INT}"
+                                        attributeref: INT
                                         acp: false
                                         fade: true
                                         blank: true
@@ -502,7 +494,7 @@ inc:
                             placeholder:
                               skill: 'extra-skill-#{i}'
                               name: ''
-                              ability: ''
+                              attribute: ''
                               acp: false
                               blank: true
                               optional: true
@@ -529,14 +521,14 @@ inc:
                             border: full
                             icon: bonus
                             width: medium
-                            eq: '%{#{skill}-ability}+%{#{skill}-proficiency-bonus}+%{#{skill}-misc}-%{#{skill}-acp}'
+                            eq: '%{#{skill}-attribute}+%{#{skill}-proficiency-bonus}+%{#{skill}-misc}-%{#{skill}-acp}'
                             format: modifier
                           - span: "="
-                          - field: '#{skill}-ability'
-                            ref: "#{abilityref}"
-                            underlay: "#{ability}"
+                          - field: '#{skill}-attribute'
+                            ref: "#{attributeref:}"
+                            underlay: "#{attribute}"
                             frame: h-label
-                            label: "#{ability}"
+                            label: "#{attribute}"
                             width: medium
                           - field: "#{skill}-proficiency"
                             control: proficiency
@@ -607,9 +599,7 @@ inc:
                             max: 6
                             reduce: 1
                             contents:
-                              - if: '#{skill-actions}'
-                                then:
-                                  - zone: '@skill-actions'
+                              - zone: '@skill-actions'
                             placeholder:
                               action: template
                               id: "skill-note-#{i}"
@@ -688,7 +678,7 @@ inc:
                           - field: perception-notes
                             frame: none
                             control: p
-                            lines: 2
+                            lines: 1
                             with-title: false
                             optional: true
                   - tail:
@@ -773,7 +763,7 @@ inc:
 
                   - section: "_{Focus}"
                     id: focus
-                    flex: large
+                    # flex: large
                     contents:
                       - row:
                         contents:
@@ -1042,8 +1032,8 @@ inc:
                             optional: true
                       
                       - slots:
-                        min: 3
-                        reduce: 1
+                        min: 2
+                        optional: true
                         merge-bottom: true
                         contents:
                           - zone: '@health'
@@ -1284,27 +1274,28 @@ inc:
                         columns:
                           -
                           -
-                          - "_{Ability Modifier}"
+                          - "_{Attribute Modifier}"
                           - "_{Proficiency}"
                           - zone: '@saving-throw-header/item'
                             contents:
                               - "_{Item}"
+                          - "_{Upgrades}"
                         rows:
                           - save: fortitude
                             legend: "_{Fortitude}"
                             short: "_{FORT}"
-                            ability: "_{CON}"
-                            abilityref: CON
+                            attribute: "_{CON}"
+                            attributeref: CON
                           - save: reflex
                             legend: "_{Reflex}"
                             short: "_{REF}"
-                            ability: "_{DEX}"
-                            abilityref: DEX
+                            attribute: "_{DEX}"
+                            attributeref: DEX
                           - save: will
                             legend: "_{Will}"
                             short: "_{WILL}"
-                            ability: "_{WIS}"
-                            abilityref: WIS
+                            attribute: "_{WIS}"
+                            attributeref: WIS
                         template:
                           - calc:
                             output:
@@ -1315,14 +1306,14 @@ inc:
                               width: large
                               underlay: "#{short}"
                               merge-top: true
-                              eq: '%{#{save}-ability}+%{#{save}-proficiency-bonus}+%{#{save}-item-bonus}+%{#{save}-potency}+%{#{save}-misc}'
+                              eq: '%{#{save}-attribute}+%{#{save}-proficiency-bonus}+%{#{save}-item-bonus}+%{#{save}-potency}+%{#{save}-misc}'
                               format: modifier
                             inputs:
-                              - field: "#{save}-ability"
+                              - field: "#{save}-attribute"
                                 frame: h-label
-                                label: "#{ability}"
-                                underlay: "#{ability}"
-                                ref: "#{abilityref}"
+                                label: "#{attribute}"
+                                underlay: "#{attribute}"
+                                ref: "#{attributeref:}"
                               - field: "#{save}-proficiency"
                                 control: proficiency
                               - zone: '@saving-throw/item'
@@ -1332,49 +1323,90 @@ inc:
                                   - field: "#{save}-item-bonus"
                                     format: int
                                     misc: true
-                              - field: "#{save}-upgrade-success"
-                                control: boost
-                                down: false
-                                frame: none
-                                width: tiny
-                              - field: "#{save}-reduce-fail"
-                                control: boost
-                                down: false
-                                frame: none
-                                width: tiny
+                              # - field: "#{save}-upgrade-success"
+                              #   control: boost
+                              #   down: false
+                              #   frame: none
+                              #   width: tiny
+                              # - field: "#{save}-reduce-fail"
+                              #   control: boost
+                              #   down: false
+                              #   frame: none
+                              #   width: tiny
+                              - row:
+                                narrow: true
+                                contents:
+                                  - spacer:
+                                  - field: "#{save}-reduce-fail"
+                                    control: checkbox
+                                    style: progress
+                                  - field: "#{save}-auto-success"
+                                    control: checkbox
+                                    style: progress
+                                  - field: "#{save}-upgrade-success"
+                                    control: checkbox
+                                    style: progress
 
                       - p: "_{Save DC = 10 + Save Bonus}"
                         optional: true
 
-                      - layout: indent-rw
+                      - row:
+                        optional: true
+                        # valign: center
                         contents:
-                          - p: 
-                            id: save-upgrade-success
-                            icon: save-crit-succeed
-                            title: "_{Upgrade success}"
-                            content: "_{When you roll a success, it becomes critical success}"
-                      - layout: indent-r
-                        contents:
-                          - p:
-                            id: save-reduce-fail
-                            icon: save-fail
-                            title: "_{Reduce failure}"
-                            content: "_{When you roll a critical failure, it becomes failure}"
+                      #     - p: "_{Crit Failure}"
+                      #       icon: save-crit-fail
+                      #       align: center
+                      #     - span: "&rarr;"
+                      #     - p: "_{Failure}"
+                      #       icon: save-fail
+                      #       align: center
+                      #     - span: "&rarr;"
+                      #     - p: "_{Success}"
+                      #       icon: save-succeed
+                      #       align: center
+                      #     - span: "&rarr;"
+                      #     - p: "_{Crit Success}"
+                      #       icon: save-crit-succeed
+                      #       align: center
+                          - p: "Crit Failure &rarr; Failure &rarr; Success &rarr; Crit Success"
+                            id: save-upgrades
+                          # - spacer:
 
                       - arrow: right-up
-                        from: p-save-upgrade-success
-                        to: field-will-upgrade-success
-                        anchor: to
-                      - arrow: right-up
-                        from: p-save-reduce-fail
-                        to: field-will-reduce-fail
-                        anchor: to
+                        from: p-save-upgrades
+                        to: field-will-auto-success
+                        optional: true
+
+                      # - layout: indent-rw
+                      #   contents:
+                      #     - p: 
+                      #       id: save-upgrade-success
+                      #       icon: save-crit-succeed
+                      #       title: "_{Upgrade success}"
+                      #       content: "_{When you roll a success, it becomes critical success}"
+                      # - layout: indent-r
+                      #   contents:
+                      #     - p:
+                      #       id: save-reduce-fail
+                      #       icon: save-fail
+                      #       title: "_{Reduce failure}"
+                      #       content: "_{When you roll a critical failure, it becomes failure}"
+
+                      # - arrow: right-up
+                      #   from: p-save-upgrade-success
+                      #   to: field-will-upgrade-success
+                      #   anchor: to
+                      # - arrow: right-up
+                      #   from: p-save-reduce-fail
+                      #   to: field-will-reduce-fail
+                      #   anchor: to
 
                       - hr:
                         light: true
 
                       - slots:
-                        min: 5
+                        min: 4
                         reduce: 1
                         merge-bottom: true
                         contents:
@@ -1389,6 +1421,7 @@ inc:
                       - h5: "_{Effects}"
                       - list:
                         hr: true
+                        light: true
                         zebra: true
                         contents:
                           - repeat: 2

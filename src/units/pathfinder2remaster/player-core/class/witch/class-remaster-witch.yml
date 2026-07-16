@@ -37,9 +37,9 @@ inc:
       reflex: trained
       will: expert
 
-  - paste: prototype-key-ability
+  - paste: prototype-key-attribute
     params:
-      key-ability: "INT"
+      key-attribute: "INT"
 
   - at: '@cover-class'
     replace:

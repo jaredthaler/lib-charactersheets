@@ -4,7 +4,7 @@
 
 unit: heritage/versatile/remaster/dragonblood
 in: heritage/versatile
-group: "_{Player Core}"
+group: "_{Player Core 2}"
 name: "_{Dragonblood}"
 
 inc:
