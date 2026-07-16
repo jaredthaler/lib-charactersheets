@@ -1544,6 +1544,52 @@ inc:
 
                               - section: "_{Proficiencies}"
                                 contents:
+                                  - row:
+                                    contents:
+                                      - field: "#{class-code}-class-dc-proficiency"
+                                        control: proficiency
+                                        has-bonus: false
+                                        frame: right
+                                        label: "#{class}"
+
+                                      # - zone: '@spell-proficiency-field'
+                                      #   contents:
+                                      # - if: "#{spell-attack-proficiency}"
+                                      # #   then:
+                                      - field: "spell-attack-proficiency"
+                                        control: proficiency
+                                        has-bonus: false
+                                        frame: right
+                                        label: "_{Spells}"
+
+                                  - row:
+                                    contents:
+                                      - p: "_{Armour}"
+                                      - field: unarmoured-proficiency
+                                        control: proficiency-icon
+                                        # frame: right
+                                        has-bonus: false
+                                        border: none
+                                        label: "_{Unarmoured}"
+                                      - field: light-armour-proficiency
+                                        control: proficiency-icon
+                                        # frame: right
+                                        has-bonus: false
+                                        border: none
+                                        label: "_{Light}"
+                                      - field: medium-armour-proficiency
+                                        control: proficiency-icon
+                                        # frame: right
+                                        has-bonus: false
+                                        border: none
+                                        label: "_{Medium}"
+                                      - field: heavy-armour-proficiency
+                                        control: proficiency-icon
+                                        # frame: right
+                                        has-bonus: false
+                                        border: none
+                                        label: "_{Heavy}"
+
                                   - list:
                                     zebra: true
                                     collapse: true
@@ -1552,8 +1598,8 @@ inc:
                                     avoid-shade: true
                                     contents:
                                       - slots:
-                                        min: 7
-                                        max: 10
+                                        min: 10
+                                        max: 14
                                         reduce: 3
                                         contents:
                                           - zone: '@proficiencies'

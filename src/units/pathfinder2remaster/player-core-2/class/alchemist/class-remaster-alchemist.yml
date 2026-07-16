@@ -48,13 +48,6 @@ inc:
       reflex: expert
       will: trained
 
-  - at: '@key-attribute-field'
-    replace:
-      - field: key-attribute
-        label: "_{INT}"
-        underlay: "_{INT}"
-        ref: INT
-
   - at: '@familiar/key-attribute'
     replace:
       - field: familiar-key-attribute-mod

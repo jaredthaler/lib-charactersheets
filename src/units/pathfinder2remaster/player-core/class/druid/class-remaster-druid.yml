@@ -33,6 +33,8 @@ inc:
       subclass: order
       subclass-name: "_{Order}"
       hp: 8
+      key-attribute: WIS
+
       perception: trained
       unarmoured: trained
       light-armour: trained
@@ -124,13 +126,6 @@ inc:
         label: "_{Order}"
         width: stretch
         align: left
-
-  - at: '@key-attribute-field'
-    replace:
-      - field: key-attribute
-        label: "_{WIS}"
-        underlay: "_{WIS}"
-        ref: WIS
         
   - at: '@familiar/key-attribute'
     replace:

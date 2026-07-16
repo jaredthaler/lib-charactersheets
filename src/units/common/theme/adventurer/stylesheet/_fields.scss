@@ -390,10 +390,10 @@ article header .field__box {
           display: block;
           position: absolute;
 
-          top: 2*constants.$pt;
-          bottom: 2*constants.$pt;
-          left: 2*constants.$pt;
-          right: 2*constants.$pt;
+          top: constants.$pt;
+          bottom: constants.$pt;
+          left: constants.$pt;
+          right: constants.$pt;
 
           border-radius: 50%;
           background: colours.$colour_main;

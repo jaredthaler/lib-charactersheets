@@ -25,10 +25,12 @@ inc:
           - span: 10 +
           - if: "#{attribute}=="
             then:
-              - field: "#{id}-attribute"
-                label: "_{Key attribute}"
-                ref: "=key-attribute"
-                misc: true
+              - zone: '@key-attribute-field'
+                contents:
+                  - field: "#{id}-attribute"
+                    label: "_{Key attribute}"
+                    ref: "=key-attribute"
+                    misc: true
             else:
               - field: "#{id}-attribute"
                 label: "_{#{attribute}}"
@@ -68,10 +70,12 @@ inc:
         inputs:
           - if: "#{attribute}=="
             then:
-              - field: "#{id}-attribute"
-                label: "_{Key attribute}"
-                ref: "=key-attribute"
-                misc: true
+              - zone: '@key-attribute-field'
+                contents:
+                  - field: "#{id}-attribute"
+                    label: "_{Key attribute}"
+                    ref: "=key-attribute"
+                    misc: true
             else:
               - field: "#{id}-attribute"
                 label: "_{#{attribute}}"
@@ -95,7 +99,7 @@ inc:
     params:
       id: inate-spell-attack
       legend: "_{Spell\nAttack}"
-      ability: ""
+      attribute: ""
       misc: true
     contents:
       - calc:
@@ -106,13 +110,14 @@ inc:
           overprint: true
           icon: bonus
           format: modifier
-          eq: '%{#{id}-ability}+%{#{id}-proficiency-bonus}+%{#{id}-misc}'
+          eq: '%{#{id}-attribute}+%{#{id}-proficiency-bonus}+%{#{id}-misc}'
         inputs:
-          - field: "#{id}-ability"
-            label: "_{#{ability}}"
-            underlay: "_{#{ability}}"
-            ref: "#{ability}"
-            misc: true
+          - zone: '@key-attribute-field'
+            contents:
+              - field: "#{id}-attribute"
+                label: "_{Key attribute}"
+                ref: "=key-attribute"
+                misc: true
           - span: "+"
           - field: "#{id}-proficiency"
             label: "_{Proficiency}"
@@ -146,10 +151,12 @@ inc:
           - span: 10 +
           - if: "#{attribute}=="
             then:
-              - field: "#{id}-attribute"
-                label: "_{Key attribute}"
-                ref: "=key-attribute"
-                misc: true
+              - zone: '@key-attribute-field'
+                contents:
+                  - field: "#{id}-attribute"
+                    label: "_{Key attribute}"
+                    ref: "=key-attribute"
+                    misc: true
             else:
               - field: "#{id}-attribute"
                 label: "_{#{attribute}}"

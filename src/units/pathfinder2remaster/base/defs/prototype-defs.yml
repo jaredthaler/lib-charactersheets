@@ -46,6 +46,8 @@ inc:
       thievery:
 
     contents:
+      - set: class-code
+        value: "#{class}"
       - set: class
         value: "#{class-name}"
 
@@ -60,6 +62,20 @@ inc:
         then:
           - set: key-attribute
             value: "#{key-attribute}"
+            
+      - at: '@key-attribute-field'
+        replace:
+          - if: "#{key-attribute}"
+            then:
+              - field:
+                label: "#{key-attribute}"
+                underlay: "#{key-attribute}"
+                ref: "#{key-attribute}"
+            else:
+              - field: "#{id}-attribute"
+                label: "_{Key attribute}"
+                ref: "=key-attribute"
+                misc: true
 
       # Class DC
       - set: "#{class}-class-dc-proficiency"
@@ -72,6 +88,16 @@ inc:
         value: "#{spells}"
       - set: spell-dc-proficiency
         value: "#{spells}"
+
+      - at: '@spell-proficiency-field'
+        replace:
+          - if: "#{spells}"
+            then:
+              - field: "spell-attack-proficiency"
+                control: proficiency
+                has-bonus: false
+                frame: right
+                label: "_{Spells}"
 
       # Armour
       - set: unarmoured-proficiency
