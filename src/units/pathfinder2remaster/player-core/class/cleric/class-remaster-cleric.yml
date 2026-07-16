@@ -172,6 +172,22 @@ inc:
                   - section: "_{Divine Font}"
                     flex: large
                     contents:
+                      - row: center
+                        contents:
+                          - field: '##:divine-font/heal'
+                            frame: left
+                            control: checkbox
+                            label: "_{Heal}"
+                          - icon: good
+                          - span: "&nbsp;"
+                          - icon: evil
+                          - field: '##:divine-font/harm'
+                            frame: right
+                            control: checkbox
+                            label: "_{Harm}"
+                      
+                      - hr:
+ 
                       - row: split
                         contents:
                           - field: divine-font-per-day
@@ -285,11 +301,11 @@ inc:
                                   field: "##:divine-font/dice"
                                   legend: "_{Dice}"
                                   icon: d8
-                                  eq: "%{focus-level}"
+                                  eq: "%{focus-rank}"
                                 inputs:
                                   - field:
-                                    ref: focus-level
-                                    label: "_{Spell Level}"
+                                    ref: focus-rank
+                                    label: "_{Spell Rank}"
 
                               - spacer:
                               - field: "##:divine-font/die"
@@ -297,7 +313,7 @@ inc:
                                 underlay: "8"
                                 border: full
                                 prefix: "_{d}"
-                                eq: "(((%{##:holy} || %{##:versatile-font}) && %{##:divine-font/healing-hands}) || ((%{##:unholy} || %{##:versatile-font}) && %{##:divine-font/harming-hands}))?10:8"
+                                eq: "(((%{##:divine-font/heal} || %{##:versatile-font}) && %{##:divine-font/healing-hands}) || ((%{##:divine-font/harm} || %{##:versatile-font}) && %{##:divine-font/harming-hands}))?10:8"
                               - spacer:
 
                               - calc:
@@ -305,11 +321,11 @@ inc:
                                   field: "##:divine-font/bonus"
                                   legend: "_{Bonus}"
                                   width: lage
-                                  eq: "%{focus-level}*8"
+                                  eq: "%{focus-rank}*8"
                                 inputs:
                                   - field:
-                                    ref: focus-level
-                                    label: "_{Spell Level}"
+                                    ref: focus-rank
+                                    label: "_{Spell Rank}"
                                   - span: "&times; 8"
 
                           - arrow: up
