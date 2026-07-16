@@ -300,7 +300,7 @@ inc:
                                 output:
                                   field: "##:divine-font/dice"
                                   legend: "_{Dice}"
-                                  icon: "%{##:divine-font/die}"
+                                  icon: "_{d}%{##:divine-font/die}"
                                   eq: "%{focus-rank}"
                                 inputs:
                                   - field:
