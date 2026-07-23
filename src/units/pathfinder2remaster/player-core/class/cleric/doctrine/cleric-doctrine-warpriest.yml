@@ -116,6 +116,7 @@ inc:
       - level: 15
         advance: "_{Fortitude saves}"
         proficiency: master
+        colour: CON
 
       - level: 19
         advance: "_{Deity's favoured weapon}, _{Spell attacks and DCs}"
