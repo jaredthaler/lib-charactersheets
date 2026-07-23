@@ -91,7 +91,7 @@ inc:
 
       - level: 11
         advance: "_{Deity's favoured weapon}, _{Simple weapons}, _{Unarmed attack}"
-        proficiency: proficiency-expert
+        proficiency: expert
       - level: 11
         advance: "_{Critical specialisation}"
 
