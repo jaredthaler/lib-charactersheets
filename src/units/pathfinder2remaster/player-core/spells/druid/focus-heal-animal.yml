@@ -42,7 +42,7 @@ inc:
                 output:
                   field: "##:two-action-heal"
                   legend: "_{Healing}"
-                  width: large
+                  width: huge
                   icon: d8
                   control: compound
                   parts:
