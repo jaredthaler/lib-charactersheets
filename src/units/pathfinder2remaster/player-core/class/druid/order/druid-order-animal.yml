@@ -40,7 +40,7 @@ inc:
 
   - at: '@druid/order-power'
     replace:
-      - section: "_{Heal Animal}"
+      - section: "_{Order Spell}"
         contents:
           - paste: focus/druid/heal-animal
 
