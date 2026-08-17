@@ -47,10 +47,10 @@ inc:
                   control: compound
                   parts:
                     - subid: dice
-                      eq: "%{focus-level}"
+                      eq: "%{focus-rank}"
                     - span: "d8 +"
                     - subid: bonus
-                      eq: "%{focus-level}*8"
+                      eq: "%{focus-rank}*8"
                 inputs:
                   - field: "##:two-action-dice"
                     eq: "%{focus-rank}"
