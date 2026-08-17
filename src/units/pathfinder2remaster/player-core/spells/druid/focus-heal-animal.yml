@@ -10,7 +10,7 @@ inc:
   - copy: focus/druid/heal-animal
     contents:
       - article: focus/druid/heal-animal
-        title: "_{Vitality Lash}"
+        title: "_{Heal Animal}"
         cat: "_{Focus} 1"
         contents:
           - flags:
