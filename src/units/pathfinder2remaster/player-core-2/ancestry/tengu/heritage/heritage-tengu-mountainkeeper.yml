@@ -28,6 +28,7 @@ inc:
           - paste: spell-attack
             params:
               attribute: "CHA"
+              misc: false
           - hr:
             light: true
           - p: "_{When casting a spell from Tengu feats, decide whether it's divine or primal.}"
