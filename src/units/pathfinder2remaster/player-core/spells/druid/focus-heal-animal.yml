@@ -50,7 +50,7 @@ inc:
                       eq: "%{focus-rank}"
                     - span: "d8 +"
                     - subid: bonus
-                      eq: %{focus-rank}"
+                      eq: "%{focus-rank}"
                 inputs:
                   - field: "##:two-action-dice"
                     eq: "%{focus-rank}"
