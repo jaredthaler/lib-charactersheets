@@ -305,11 +305,12 @@ inc:
                                         title: "Support"
                                         lines: 2
                                         reduce: 1
-                                  # - action: template
-                                  #   contents:
-                                  #     - article:
-                                  #       lines: 2
-                                  #       reduce: 1
+                                  - action: template
+                                    id: "animal-companion-action-3"
+                                    contents:
+                                      - article:
+                                        lines: 2
+                                        reduce: 1
 
 
                           - section: "_{Speed}"
