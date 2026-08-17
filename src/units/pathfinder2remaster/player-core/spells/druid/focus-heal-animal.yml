@@ -1,0 +1,61 @@
+# Copyright 2026 Marcus Downing
+# This file is compliant with the Open Game License (OGL).
+# See the text of the OGL within this repository.
+
+unit: focus/druid/heal-animal
+name: "_{Heal Animal}"
+group: "_{Player Core}"
+
+inc:
+  - copy: focus/druid/heal-animal
+    contents:
+      - article: focus/druid/heal-animal
+        title: "_{Vitality Lash}"
+        cat: "_{Focus} 1"
+        contents:
+          - flags:
+            - "_{Healing}"
+            - "_{Vitality}"
+          - dl:
+              target: "_{1 willing living animal}"
+          - action: 1
+            contents:
+              - dl:
+                  Range: "_{touch}"
+              - calc:
+                output:
+                  field: "##:one-action-healing"
+                  legend: "_{Healing}"
+                  width: large
+                  suffix: "_{d8}"
+                  icon: d8
+                  eq: "%{focus-rank}"
+                inputs:
+                  - field: "##:one-action-heighten"
+                    eq: "%{focus-rank}"
+                    label: "_{Focus Rank}"
+          - action: 2
+            contents:
+              - dl:
+                  Range: "_{30 feet}"
+              - calc:
+                output:
+                  field: "##:two-action-heal"
+                  legend: "_{Healing}"
+                  width: large
+                  icon: d8
+                  control: compound
+                  parts:
+                    - subid: dice
+                      eq: "%{focus-level}"
+                    - span: "d8 +"
+                    - subid: bonus
+                      eq: "%{focus-level}*8"
+                inputs:
+                  - field: "##:two-action-dice"
+                    eq: "%{focus-rank}"
+                    label: "_{Focus Rank}"
+                  - span: "d8 + 8 &times;"
+                  - field: "##:two-action-bonus-rank"
+                    eq: "%{focus-rank}"
+                    label: "_{Focus Rank}"
