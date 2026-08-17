@@ -307,8 +307,7 @@ inc:
                                         reduce: 1
                                   - action: template
                                     contents:
-                                      - article:
-                                        id: "animal-companion-action-3"
+                                      - article: 'animal-companion-action-3'
                                         lines: 2
                                         reduce: 1
 
