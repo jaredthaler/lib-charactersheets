@@ -195,6 +195,7 @@ inc:
                               - zone: '@druid/order-feat'
                                 contents:
                                   - article: druid:order/feat
+                                    cat: "_{Feat}"
                                     lines: 3
 
 
@@ -206,7 +207,6 @@ inc:
                             hr: true
                             contents:
                               - article: druid:order/power
-                                cat: "_{Feat}"
                                 lines: 3
 
                   - section: "_{Spellcasting}"
