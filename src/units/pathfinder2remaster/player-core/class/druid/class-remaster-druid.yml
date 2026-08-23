@@ -195,7 +195,6 @@ inc:
                               - zone: '@druid/order-feat'
                                 contents:
                                   - article: druid:order/feat
-                                    cat: "_{Feat}"
                                     lines: 3
 
 
