@@ -39,49 +39,9 @@ inc:
 
   - at: '@druid/order-power'
     replace:
-      - section: "_{Heal Animal}"
+      - section: "_{Order Spell}"
         contents:
-          - list:
-            hr: true
-            contents:
-              - action: 1
-                contents:
-                  - g:
-                    pad: true
-                    contents:
-                      - p: "_{Touch one creature}"
-                      - calc:
-                        output:
-                          field: druid-heal-animal-1-healing
-                          legend: "Healing"
-                          suffix: "d8"
-                          icon: d8
-                          width: large
-                          eq: "%{focus-rank}"
-                        inputs:
-                          - label: "_{Focus\nLevel}"
-
-              - action: 2
-                contents:
-                  - g:
-                    pad: true
-                    contents:
-                      - p: "_{One creature within 30ft}"
-                      - calc:
-                        output:
-                          field: druid-heal-animal-2-healing
-                          legend: "Healing"
-                          width: gargantuan
-                          control: compound
-                          icon: d8
-                          parts:
-                            - subid: dice
-                              eq: "%{focus-rank}"
-                            - span: "d8 +"
-                            - subid: bonus
-                              eq: "%{focus-rank}"
-                        inputs:
-                          - label: "_{Focus\nLevel}"
+          - paste: focus/druid/heal-animal
 
   - at: '@anathema'
     replace:
