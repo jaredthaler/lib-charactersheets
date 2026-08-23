@@ -206,6 +206,7 @@ inc:
                             hr: true
                             contents:
                               - article: druid:order/power
+                                cat: "_{Feat}"
                                 lines: 3
 
                   - section: "_{Spellcasting}"
