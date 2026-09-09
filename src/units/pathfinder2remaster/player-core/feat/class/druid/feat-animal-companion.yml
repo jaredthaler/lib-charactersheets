@@ -1,0 +1,20 @@
+# Copyright 2025 Marcus Downing
+# This file is compliant with the Open Game License (OGL).
+# See the text of the OGL within this repository.
+
+unit: feat/druid/animal-companion
+in: feat/druid
+group: "_{Player Core}"
+name: "_{Animal Companion}"
+
+require:
+  - unit: option/animal-companion
+
+inc:
+  - copy: feat/druid/animal-companion
+    contents:
+      - article: "##:feat/animal-companion"
+        title: "_{Animal Companion}"
+        cat: "_{Feat}"
+        contents:
+          - p: "_{You gain a young animal companion.}"
