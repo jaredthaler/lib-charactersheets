@@ -8,6 +8,7 @@ group: "_{Player Core}"
 name: "_{Animal}"
 
 require:
+  - unit: prototype/druid/order
   - unit: feat/druid/animal-companion
   - unit: focus/druid/heal-animal
 
