@@ -48,6 +48,10 @@ inc:
     value: 6
     priority: low
 
+  - set: languages-class
+    value: ""
+    priority: low
+
   - at: '@pages'
     add:
 
@@ -106,7 +110,7 @@ inc:
                         zebra: true
                         hr: true
                         contents:
-                          - box:
+                          - g:
                             contents:
                               - row:
                                 contents:
@@ -146,7 +150,7 @@ inc:
                                       - spacer:
                                       - field: age
                                         label: "_{Age}"
-                                        # width: large
+                                        width: large
                                       - field: size
                                         label: "_{Size}"
                                         icon: size
@@ -166,6 +170,7 @@ inc:
                               - field: languages
                                 label: "_{Languages}"
                                 # width: stretch
+                                value: "#{languages}#{languages-class}"
                                 control: p
                                 lines: 2
                                 with-title: false
@@ -217,10 +222,9 @@ inc:
                                                 width: ""
                                                 underlay: "#{short}"
                                                 format: modifier
-                                          - field: "#{code}-half"
-                                            control: checkbox
-                                            label: "&half;"
-                                            frame: left
+                                              - subid: "half"
+                                                control: checkbox
+                                                half-boost: true
 
                               - field: attribute-note
                                 width: stretch
@@ -247,25 +251,25 @@ inc:
                                         border: full
                                         icon: proficiency-trained
                                         ruby: "_{Level}\n+2"
-                                        eq: "req(['level'],minmax(%{level},1,20)+2)"
+                                        eq: "req(['level'],max(%{level},1)+2)"
                                       - field: proficiency-expert
                                         label: "_{Expert}"
                                         border: full
                                         icon: proficiency-expert
                                         ruby: "_{Level}\n+4"
-                                        eq: "req(['level'],minmax(%{level},1,20)+4)"
+                                        eq: "req(['level'],max(%{level},1)+4)"
                                       - field: proficiency-master
                                         label: "_{Master}"
                                         border: full
                                         icon: proficiency-master
                                         ruby: "_{Level}\n+6"
-                                        eq: "req(['level'],minmax(%{level},1,20)+6)"
+                                        eq: "req(['level'],max(%{level},1)+6)"
                                       - field: proficiency-legendary
                                         label: "_{Legendary}"
                                         border: full
                                         icon: proficiency-legendary
                                         ruby: "_{Level}\n+8"
-                                        eq: "req(['level'],minmax(%{level},1,20)+8)"
+                                        eq: "req(['level'],max(%{level},1)+8)"
                   - tail:
 
               - g:
@@ -525,7 +529,7 @@ inc:
                             format: modifier
                           - span: "="
                           - field: '#{skill}-attribute'
-                            ref: "#{attributeref:}"
+                            ref: "#{attributeref}"
                             underlay: "#{attribute}"
                             frame: h-label
                             label: "#{attribute}"
@@ -783,27 +787,29 @@ inc:
 
                           - spacer:
                           
-                          - field: focus-points
-                            legend: "_{Focus Points}"
-                            control: compound
-                            border: multi
-                            width: stretch
-                            parts:
-                              - control: checkgrid
-                                subid: total
-                                depth: 1
-                                max: 3
-                                ruby: "_{Total}"
-                                border: none
-                                style: progress
-                              - type: vr
-                              - control: checkgrid
-                                subid: current
-                                depth: 1
-                                max: 3
-                                ruby: "_{Current}"
-                                border: none
-                                style: progress
+                          - zone: '@focus-points'
+                            contents:
+                              - field: focus-points
+                                legend: "_{Focus Points}"
+                                control: compound
+                                border: multi
+                                width: stretch
+                                parts:
+                                  - control: checkgrid
+                                    subid: total
+                                    depth: 1
+                                    max: 3
+                                    ruby: "_{Total}"
+                                    border: none
+                                    style: progress
+                                  - type: vr
+                                  - control: checkgrid
+                                    subid: current
+                                    depth: 1
+                                    max: 3
+                                    ruby: "_{Current}"
+                                    border: none
+                                    style: progress
 
                       - hr:
                       - paste: 10mins
@@ -929,19 +935,23 @@ inc:
 
                                       - spacer:
 
-                          - repeat: 3
+                          - repeat: 2
                             reduce: 1
                             contents:
-                              - paste: weapon
+                              - paste: weapon-flexible
                                 params:
-                                  i: '#{i}'
-
+                                  i: "#{i}"
+                                  type: melee
                           - repeat: 2
-                            start: 4
+                            start: 3
+                            rows:
+                              - type: unarmed
+                              - type: ranged
                             contents:
-                              - paste: weapon-with-ammo
+                              - paste: weapon-flexible
                                 params:
-                                  i: '#{i}'
+                                  i: "#{i}"
+                                  type: "#{type}"
 
           - layout: 2r
             contents:
@@ -1238,7 +1248,6 @@ inc:
                                       - subid: current
                                         ruby: "_{Current}"
                                         border: full
-                                        temp: true
                                         suffix: "_{hp}"
                                         format: int
 
@@ -1279,7 +1288,9 @@ inc:
                           - zone: '@saving-throw-header/item'
                             contents:
                               - "_{Item}"
-                          - "_{Upgrades}"
+                          - icon: save-crit-succeed
+                          - icon: save-succeed
+                          - icon: save-fail
                         rows:
                           - save: fortitude
                             legend: "_{Fortitude}"
@@ -1313,7 +1324,7 @@ inc:
                                 frame: h-label
                                 label: "#{attribute}"
                                 underlay: "#{attribute}"
-                                ref: "#{attributeref:}"
+                                ref: "#{attributeref}"
                               - field: "#{save}-proficiency"
                                 control: proficiency
                               - zone: '@saving-throw/item'
@@ -1323,84 +1334,40 @@ inc:
                                   - field: "#{save}-item-bonus"
                                     format: int
                                     misc: true
-                              # - field: "#{save}-upgrade-success"
-                              #   control: boost
-                              #   down: false
-                              #   frame: none
-                              #   width: tiny
-                              # - field: "#{save}-reduce-fail"
-                              #   control: boost
-                              #   down: false
-                              #   frame: none
-                              #   width: tiny
-                              - row:
-                                narrow: true
-                                contents:
-                                  - spacer:
-                                  - field: "#{save}-reduce-fail"
-                                    control: checkbox
-                                    style: progress
-                                  - field: "#{save}-auto-success"
-                                    control: checkbox
-                                    style: progress
-                                  - field: "#{save}-upgrade-success"
-                                    control: checkbox
-                                    style: progress
+                              - field: "#{save}-upgrade-success"
+                                control: boost
+                                down: false
+                                frame: none
+                                width: tiny
+                              - field: "#{save}-auto-success"
+                                control: boost
+                                down: false
+                                frame: none
+                                width: tiny
+                              - field: "#{save}-reduce-fail"
+                                control: boost
+                                down: false
+                                frame: none
+                                width: tiny
 
                       - p: "_{Save DC = 10 + Save Bonus}"
                         optional: true
 
-                      - row:
-                        optional: true
-                        # valign: center
-                        contents:
-                      #     - p: "_{Crit Failure}"
-                      #       icon: save-crit-fail
-                      #       align: center
-                      #     - span: "&rarr;"
-                      #     - p: "_{Failure}"
-                      #       icon: save-fail
-                      #       align: center
-                      #     - span: "&rarr;"
-                      #     - p: "_{Success}"
-                      #       icon: save-succeed
-                      #       align: center
-                      #     - span: "&rarr;"
-                      #     - p: "_{Crit Success}"
-                      #       icon: save-crit-succeed
-                      #       align: center
-                          - p: "Crit Failure &rarr; Failure &rarr; Success &rarr; Crit Success"
-                            id: save-upgrades
-                          # - spacer:
-
-                      - arrow: right-up
-                        from: p-save-upgrades
-                        to: field-will-auto-success
-                        optional: true
-
-                      # - layout: indent-rw
-                      #   contents:
-                      #     - p: 
-                      #       id: save-upgrade-success
-                      #       icon: save-crit-succeed
-                      #       title: "_{Upgrade success}"
-                      #       content: "_{When you roll a success, it becomes critical success}"
-                      # - layout: indent-r
-                      #   contents:
-                      #     - p:
-                      #       id: save-reduce-fail
-                      #       icon: save-fail
-                      #       title: "_{Reduce failure}"
-                      #       content: "_{When you roll a critical failure, it becomes failure}"
-
-                      # - arrow: right-up
-                      #   from: p-save-upgrade-success
-                      #   to: field-will-upgrade-success
-                      #   anchor: to
-                      # - arrow: right-up
-                      #   from: p-save-reduce-fail
-                      #   to: field-will-reduce-fail
-                      #   anchor: to
+                      - p:
+                        id: save-upgrade-success
+                        icon: save-crit-succeed
+                        title: "_{Upgrade success}"
+                        content: "_{Success &rarr; Critical Success}"
+                      - p:
+                        id: save-auto-success
+                        icon: save-succeed
+                        title: "_{Auto success}"
+                        content: "_{Failure &rarr; Success}"
+                      - p:
+                        id: save-reduce-fail
+                        icon: save-fail
+                        title: "_{Reduce failure}"
+                        content: "_{Critical Failure &rarr; Failure}"
 
                       - hr:
                         light: true

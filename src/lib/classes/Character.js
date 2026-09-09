@@ -24,6 +24,7 @@ const knownVars = [
   "language",
   "miniSize",
   "skillActions",
+  "hideOptional",
 ];
 
 function parseCharacter(primary, request) {
@@ -95,6 +96,7 @@ function parseCharacter(primary, request) {
     archetypeStyle: attr.archetypeStyle,
     skillActions: attr.skillActions,
     miniSize: attr.miniSize,
+    hideOptional: attr.hideOptional,
 
     browserTarget: attr.browserTarget,
     printLarge: attr.printLarge || attr.optionLargePrint,
@@ -151,18 +153,7 @@ function parseCharacter(primary, request) {
     char.units.push('high-contrast');
   }
   if (attr.printDyslexic) {
-    log("Character", "Dyslexic font", attr.printDyslexicFont);
-    switch(attr.printDyslexicFont) {
-      case 'dyslexie':
-        char.units.push('dyslexie');
-        break;
-      case 'lexend':
-        char.units.push('lexend');
-        break;
-      default:
-        char.units.push('dyslexic');
-        break;
-    }
+    addDyslexicFontUnit(attr.printDyslexicFont);
   }
 
   // game-specific settings
@@ -446,6 +437,7 @@ export class Character extends Instance {
 
           // language
           document.language = data.language;
+          this.addLanguageScriptUnit(document.language);
           document.setMeasurementUnits(data.measurementUnits);
           // log("Character", "Doc measurement units", document.measurementUnits);
           if (document.measurementUnits == "metric") {
@@ -461,6 +453,9 @@ export class Character extends Instance {
             document.highContrast = true;
           }
           if (data.optionDyslexic && (data.printDyslexicFont == 'dyslexie' || data.printDyslexicFont == 'lexend')) {
+            document.skipOptional = true;
+          }
+          if (data.hideOptional) {
             document.skipOptional = true;
           }
 
