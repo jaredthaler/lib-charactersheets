@@ -18,7 +18,11 @@ inc:
 
     contents:
       - set: subclass
-        value: "#{subclass-name}"
+        value: "_{Test}"
+
+      - set: intimidation-proficiency
+        value: trained
+
 
       - at: '@druid/order'
         replace:
