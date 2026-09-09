@@ -1,0 +1,62 @@
+# Copyright 2026 Marcus Downing
+# This file is compliant with the Open Game License (OGL).
+# See the text of the OGL within this repository.
+
+unit: focus/druid/heal-animal
+name: "_{Heal Animal}"
+group: "_{Player Core}"
+
+inc:
+  - copy: focus/druid/heal-animal
+    contents:
+      - article: ##:focus/druid/heal-animal
+        title: "_{Heal Animal}"
+        cat: "_{Focus} 1"
+        contents:
+          - flags:
+            - "_{Healing}"
+            - "_{Vitality}"
+          - dl:
+              target: "_{1 willing living animal}"
+
+          - action: 1
+            contents:
+              - dl:
+                range: "_{touch}"
+              - calc:
+                output:
+                  field: "##:healing-1-action"
+                  legend: "_{Healing}"
+                  width: large
+                  suffix: "_{d8}"
+                  icon: d8
+                  eq: "%{focus-rank}"
+                inputs:
+                  - span: "_{1d8} x "
+                  - field: "##:rank-1-action"
+                    eq: "%{focus-rank}"
+                    label: "_{Focus Rank}"
+          - hr:
+          - action: 2
+            contents:
+              - dl:
+                range: "_{30ft}"
+              - calc:
+                output:
+                  field: "##:healing-2-action"
+                  legend: "_{Healing}"
+                  width: huge
+                  control: compound
+                  parts:
+                    - subid: dice
+                      eq: "%{focus-rank}"
+                    - span: "d8 +"
+                    - subid: bonus
+                      eq: "8*%{focus-rank}"                  
+                  icon: d8
+                inputs:
+                  - span: "_{1d8 + 8} x "
+                  - field: "##:rank-2-action"
+                    eq: "%{focus-rank}"
+                    label: "_{Focus Rank}"
+
