@@ -13,9 +13,6 @@ require:
   - unit: focus/druid/cornucopia
 
 inc:
-  - set: performance-proficiency
-    value: trained
-
   - paste: prototype-druid-order
     params:
       subclassname: "_{Leaf}"
