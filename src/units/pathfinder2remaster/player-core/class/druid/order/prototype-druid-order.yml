@@ -52,5 +52,5 @@ inc:
           - li: "#{anathama2}"
           - li: "#{orderskill}-proficiency"
 
-      - set: "medicine-proficiency"
-        value: "#{acrobatics}"
+      - set: medicine-proficiency
+        value: trained
