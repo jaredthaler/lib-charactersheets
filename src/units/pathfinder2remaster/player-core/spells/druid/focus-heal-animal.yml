@@ -21,8 +21,7 @@ inc:
 
           - action: 1
             contents:
-              - dl:
-                range: "_{touch}"
+              - p: "_{Range}: _{touch}"
               - calc:
                 output:
                   field: "##:healing-1-action"
@@ -34,13 +33,13 @@ inc:
                 inputs:
                   - span: "_{1d8} x "
                   - field: "##:rank-1-action"
+                    width: large
                     eq: "%{focus-rank}"
                     label: "_{Focus Rank}"
           - hr:
           - action: 2
             contents:
-              - dl:
-                range: "_{30ft}"
+              - p: "_{Range}: _{30ft}"
               - calc:
                 output:
                   field: "##:healing-2-action"
@@ -57,6 +56,7 @@ inc:
                 inputs:
                   - span: "_{1d8 + 8} x "
                   - field: "##:rank-2-action"
+                    width: large
                     eq: "%{focus-rank}"
                     label: "_{Focus Rank}"
 
