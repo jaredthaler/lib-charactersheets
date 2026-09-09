@@ -36,7 +36,9 @@ inc:
       # Order Spell
       - at: '@druid/order-power'
         replace:
-          - paste: "#{orderspell}"
+          - section: "_{Order Spell}"
+            contents:
+              - paste: "#{orderspell}"
 
       # focus spell summary line
       - at: '@focus-spells'
