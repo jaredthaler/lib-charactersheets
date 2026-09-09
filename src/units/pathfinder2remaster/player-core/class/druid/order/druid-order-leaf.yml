@@ -15,7 +15,7 @@ require:
 inc:
   - paste: prototype-druid-order
     params:
-      subclass: "_{Leaf}"
+      subclassname: "_{Leaf}"
       orderskill: diplomacy
       orderfeat: feat/druid/leshy-familiar
       orderspell: focus/druid/cornucopia
