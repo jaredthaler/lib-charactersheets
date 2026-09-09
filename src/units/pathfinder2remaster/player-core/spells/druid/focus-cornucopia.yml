@@ -1,0 +1,54 @@
+# Copyright 2026 Marcus Downing
+# This file is compliant with the Open Game License (OGL).
+# See the text of the OGL within this repository.
+
+unit: focus/druid/cornucopia
+name: "_{Cornucopia}"
+group: "_{Player Core}"
+
+inc:
+  - copy: focus/druid/cornucopia-summary
+    contents:  
+      - action:
+        contents:
+          - p:
+            title: "_{Cornucopia}"
+            content: "_{Conjure produce that heals when eaten.}"
+
+
+  - copy: focus/druid/cornucopia
+    contents:
+      - article: 
+        title: "_{Cornucopia}"
+        cat: "_{Focus} 1"
+        contents:
+          - flags:
+            - "_{Healing}"
+            - "_{Plant}"
+            - "_{Vitality}"
+          - dl:
+              Duration: "_{10 minutes}"
+
+          - action: 2
+            contents:
+              - p: "_{Conjure produce that heals when eaten.}"
+              - row:
+                contents:
+                  - calc:
+                    output:
+                      field: cornucopia-produce
+                      legend: "_{Produce}"
+                      width: large
+                      eq: "%{focus-rank}"
+                    inputs:
+                      - label: "_{Focus Rank}"
+
+                  - spacer:
+                  - field: cornucopia-healing
+                    label: "Healing"
+                    control: value
+                    value: "_{1d6}+4"
+                    width: large
+              - action: 1
+                contents:
+                  - p: "_{consume any amount of produce}"
