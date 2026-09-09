@@ -18,7 +18,7 @@ inc:
 
   - copy: focus/druid/cornucopia
     contents:
-      - article: 
+      - article: "##:focus/druid/cornucopia"
         title: "_{Cornucopia}"
         cat: "_{Focus} 1"
         contents:
