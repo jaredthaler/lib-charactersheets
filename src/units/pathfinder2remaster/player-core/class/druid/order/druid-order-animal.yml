@@ -9,6 +9,7 @@ name: "_{Animal}"
 
 require:
   - unit: option/animal-companion
+  - unit: focus/druid/heal-animal
 
 inc:
   - set: subclass
