@@ -50,4 +50,4 @@ inc:
         replace:
           - li: "#{anathama1}"
           - li: "#{anathama2}"
-      
+          - li: "#{orderskill}-proficiency"
