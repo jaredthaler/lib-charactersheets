@@ -1,0 +1,20 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: feat/druid/leshy-familiar
+in: feat/druid
+group: "_{Player Core}"
+name: "_{Leshy Familiar}"
+
+require:
+  - unit: option/familiar
+  
+inc:
+  - copy: feat/druid/leshy-familiar
+    contents:
+      - article: "##:feat/leshy-familiar"
+        title: "_{Leshy Familiar}"
+        cat: "_{Feat}"
+        contents:
+          - p: "_{You gain a tiny leshy familiar with the plant or fungus familiar ability (doesn't count against your limit of familiar abilities.)}"
