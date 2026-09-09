@@ -9,7 +9,7 @@ group: "_{Core Rulebook}"
 inc:
   - copy: prototype-druid-order
     params:
-      subclass:
+      subclassname:
       orderskill: 
       orderfeat: 
       orderspell:
@@ -18,7 +18,7 @@ inc:
 
     contents:
       - set: subclass
-        value: "_{Test}"
+        value: "#{subclassname}"
 
       - set: intimidation-proficiency
         value: trained
