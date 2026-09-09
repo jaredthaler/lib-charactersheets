@@ -80,8 +80,8 @@ inc:
                             contents:
                               - g:
                                 contents:
-                                  - h5: "_{Work Together}"
-                                  - field: animal-companion/work-together
+                                  - h5: "_{Support}"
+                                  - field: animal-companion/support-benefit
                                     width: stretch
                                     frame: none
                                     align: left
@@ -303,8 +303,9 @@ inc:
                                     contents:
                                       - article:
                                         title: "Support"
-                                        lines: 2
-                                        reduce: 1
+                                        contents: 
+                                          - p: "_{Gain your Companion's Support Benefit}"
+                                          - p: "_{Companion can only use basic move actions this turn.}"
                                   - action: template
                                     contents:
                                       - article:
