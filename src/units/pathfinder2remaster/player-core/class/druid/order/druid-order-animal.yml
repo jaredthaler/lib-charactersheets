@@ -15,7 +15,7 @@ require:
 inc:
   - paste: prototype-druid-order
     params:
-      subclass: "_{Animal}"
+      subclassname: "_{Animal}"
       orderskill: athletics
       orderfeat: feat/druid/animal-companion
       orderspell: focus/druid/heal-animal
