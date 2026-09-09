@@ -15,7 +15,7 @@ require:
 inc:
   - paste: prototype-druid-order
     params:
-      subclass: "_{Storm}"
+      subclassname: "_{Storm}"
       orderskill: acrobatics
       orderfeat: feat/druid/storm-born
       orderspell: focus/druid/tempest-surge
