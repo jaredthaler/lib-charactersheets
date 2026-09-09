@@ -1,0 +1,17 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: feat/druid/storm-born
+in: feat/druid
+group: "_{Player Core}"
+name: "_{Storm Born}"
+
+inc:
+  - copy: feat/druid/strom-born
+    contents:
+      - article: "##:feat/strom-born"
+        title: "_{Storm Born}"
+        cat: "_{Feat}"
+        contents:
+          - p: "_{No penalties or flat checks to ranged spell attacks or Perception due to weather..}"
