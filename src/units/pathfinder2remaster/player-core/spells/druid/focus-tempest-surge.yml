@@ -1,0 +1,52 @@
+# Copyright 2026 Marcus Downing
+# This file is compliant with the Open Game License (OGL).
+# See the text of the OGL within this repository.
+
+unit: focus/druid/tempest-surge
+name: "_{Tempest Surge}"
+group: "_{Player Core}"
+
+inc:
+  - copy: focus/druid/tempest-surge-summary
+    contents:  
+      - action: 2
+        contents:
+          - p:
+            title: "_{Tempest Surge}"
+            content: "_{Surround one enemy with a storm.}"
+
+
+  - copy: focus/druid/tempest-surge
+    contents:
+      - article: "##:focus/druid/tempest-surge"
+        title: "_{Tempest Surge}"
+        cat: "_{Focus} 1"
+        contents:
+          - flags:
+            - "_{Air}"
+            - "_{Electricity}"
+          - dl:
+              range: "_{30ft}"
+              target: "_{1 creature}"
+
+          - action: 2
+            contents:
+              - p: "_{Surround one enemy with a storm.}"
+              - calc:
+                output:
+                  field: "##:damage"
+                  legend: "_{Electricity Damage}"
+                  width: large
+                  suffix: "_{d12}"
+                  icon: d12
+                  eq: "%{focus-rank}"
+                inputs:
+                  - span: "1 +"
+                  - field: "##:heighten"
+                    eq: "%{focus-rank}-1"
+                    label: "_{Heightened +1}"
+          - paste: basic-save
+            params:
+              save: "_{REF}"  
+          - p: "_{On a failure, target is clumsy 2 for 1 round.}"
+            icon: save-fail
