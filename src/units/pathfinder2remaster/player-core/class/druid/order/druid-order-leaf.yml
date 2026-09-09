@@ -1,4 +1,4 @@
-# Copyright 2025 Marcus Downing
+# Copyright 2026 Marcus Downing
 # This file is licensed under the ORC License.
 # See the ORC Notice within this repository.
 
@@ -8,66 +8,17 @@ group: "_{Player Core}"
 name: "_{Leaf}"
 
 require:
-  - unit: option/familiar
-  
+  - unit: prototype/druid/order
+  - unit: feat/druid/leshy-familiar
+  - unit: focus/druid/cornucopia
+
 inc:
-  - set: subclass
-    value: "_{Leaf}"
+  - paste: prototype-druid-order
+    params:
+      subclass: "_{Animal}"
+      orderskill: diplomacy
+      orderfeat: feat/druid/leshy-familiar
+      orderspell: focus/druid/cornucopia
+      anathama1: "_{Committing wanton cruelty to plants or fungi}"
+      anathama2: "_{Killing plants or fungi unnecessarily}"
 
-  - set: diplomacy-proficiency
-    value: trained
-
-  - at: '@druid/order'
-    replace:
-      - h4: "_{Leaf Order}"
-
-  - at: '@druid/order-feat'
-    replace:
-      - article: "##:feat/leshy-familiar"
-        title: "_{Leshy Familiar}"
-        cat: "_{Feat}"
-        contents:
-          - p: "_{You gain a leshy familiar with your choice of the plant or fungus familiar ability, which doesn't count against your usual limit of familiar abilities.}"
-
-  - at: '@focus-spells'
-    add:
-      - action: 2
-        contents:
-          - p:
-            title: "_{Cornucopia}"
-            content: "_{Conjure a piece of produce that heals when eaten.}"
-
-  - at: '@druid/order-power'
-    replace:
-      - section: "_{Cornucopia}"
-        contents:
-          - paste: focus
-            contents:
-              - p: "_{Conjure a piece of produce that heals when eaten.}"
-              - row:
-                contents:
-                  - calc:
-                    output:
-                      field: cornucopia-produce
-                      legend: "_{Produce}"
-                      width: large
-                      eq: "%{focus-rank}"
-                    inputs:
-                      - label: "_{Focus Level}"
-
-                  - spacer:
-                  - field: cornucopia-healing
-                    label: "Healing"
-                    control: value
-                    value: "_{1d6}+4"
-                    width: large
-
-  - at: '@focus-points'
-    replace:
-      - field: druid-leaf-cornucopia-focus
-        label: "_{Leaf Order}"
-
-  - at: '@anathema'
-    replace:
-      - li: "_{Committing wanton cruelty to plants or fungi}"
-      - li: "_{Killing plants or fungi unnecessarily}"
