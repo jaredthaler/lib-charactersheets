@@ -8,43 +8,16 @@ group: "_{Player Core}"
 name: "_{Animal}"
 
 require:
-  - unit: option/animal-companion
+  - unit: feat/druid/animal-companion
   - unit: focus/druid/heal-animal
 
 inc:
-  - set: subclass
-    value: "_{Animal}"
+  - paste: prototype-druid-order
+    params:
+      subclass: "_{Animal}"
+      orderskill: athletics
+      orderfeat: feat/druid/animal-companion
+      orderspell: focus/druid/heal-animal
+      anathama1: "_{Committing wanton cruelty to animals}"
+      anathama2: "_{Killing animals unnecessarily}"
 
-  - set: athletics-proficiency
-    value: trained
-
-  - at: '@druid/order'
-    replace:
-      - h4: "_{Animal Order}"
-
-  - at: '@druid/order-feat'
-    replace:
-      - article: "##:feat/animal-companion"
-        title: "_{Animal Companion}"
-        cat: "_{Feat}"
-        contents:
-          - p: "_{You gain a young animal companion.}"
-
-  - at: '@focus-spells'
-    add:
-      - action:
-        contents:
-          - p:
-            title: "_{Heal Animal}"
-            content: "_{Heal one creature, touch or ranged.}"
-
-  - at: '@druid/order-power'
-    replace:
-      - section: "_{Order Spell}"
-        contents:
-          - paste: focus/druid/heal-animal
-
-  - at: '@anathema'
-    replace:
-      - li: "_{Committing wanton cruelty to animals}"
-      - li: "_{Killing animals unnecessarily}"
