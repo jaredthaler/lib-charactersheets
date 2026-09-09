@@ -20,11 +20,6 @@ inc:
       - set: subclass
         value: "#{subclassname}"
 
-      - set: performance-proficiency
-        value: trained
-        priority: high
-
-
       - at: '@druid/order'
         replace:
           - h4: "#{subclass-name} _{Order}"
@@ -32,6 +27,7 @@ inc:
       # Order Skill
       - set: "#{orderskill}-proficiency"
         value: trained
+        priority: high
 
       # Order Feat
       - at: '@druid/order-feat'
@@ -56,6 +52,3 @@ inc:
           - li: "#{anathama1}"
           - li: "#{anathama2}"
           - li: "#{orderskill}-proficiency"
-
-      - set: medicine-proficiency
-        value: trained
