@@ -1,0 +1,51 @@
+# Copyright 2026 Marcus Downing
+# This file is compliant with the Open Game License (OGL).
+# See the text of the OGL within this repository.
+
+unit: prototype/druid/order
+name: "_{Prototype Druid Order}"
+group: "_{Core Rulebook}"
+
+inc:
+  - copy: prototype-druid-order
+    params:
+      subclass:
+      orderskill: 
+      orderfeat: 
+      orderspell:
+      anathama1: ""
+      anathama2: ""
+
+    contents:
+      - set: subclass
+        value: "#{subclass-name}"
+
+      - at: '@druid/order'
+        replace:
+          - h4: "#{subclass-name} _{Order}"
+
+      # Order Skill
+      - set: "#{orderskill}-proficiency"
+        value: trained
+
+      # Order Feat
+      - at: '@druid/order-feat'
+        replace:
+          - paste: "#{orderfeat}"
+    
+      # Order Spell
+      - at: '@druid/order-power'
+        replace:
+          - paste: "#{orderspell}"
+
+      # focus spell summary line
+      - at: '@focus-spells'
+        add:
+          - paste: "#{orderspell}-summary"
+
+      # Anathema
+      - at: '@anathema'
+        replace:
+          - li: "#{anathama1}"
+          - li: "#{anathama2}"
+      
