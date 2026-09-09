@@ -9,7 +9,7 @@ group: "_{Player Core}"
 inc:
   - copy: focus/druid/cornucopia-summary
     contents:  
-      - action:
+      - action: 2
         contents:
           - p:
             title: "_{Cornucopia}"
