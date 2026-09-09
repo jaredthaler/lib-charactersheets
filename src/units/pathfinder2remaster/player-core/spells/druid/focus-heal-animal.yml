@@ -18,7 +18,7 @@ inc:
 
   - copy: focus/druid/heal-animal
     contents:
-      - article: ##:focus/druid/heal-animal
+      - article: "##:focus/druid/heal-animal"
         title: "_{Heal Animal}"
         cat: "_{Focus} 1"
         contents:
