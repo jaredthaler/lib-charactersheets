@@ -20,7 +20,7 @@ inc:
       - set: subclass
         value: "#{subclassname}"
 
-      - set: intimidation-proficiency
+      - set: performance-proficiency
         value: trained
 
 
