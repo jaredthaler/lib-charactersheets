@@ -7,6 +7,15 @@ name: "_{Heal Animal}"
 group: "_{Player Core}"
 
 inc:
+  - copy: focus/druid/heal-animal-summary
+    contents:  
+      - action:
+        contents:
+          - p:
+            title: "_{Heal Animal}"
+            content: "_{Heal one creature, touch or ranged.}"
+
+
   - copy: focus/druid/heal-animal
     contents:
       - article: ##:focus/druid/heal-animal
